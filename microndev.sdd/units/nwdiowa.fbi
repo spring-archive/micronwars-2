@@ -1,0 +1,89 @@
+[UNITINFO]
+	{
+	name=USS Iowa;
+	
+	unitname=nwdiowa;
+	buildcostenergy=59400;
+	buildcostmetal=5940;
+	buildtime=131400;
+	
+	description=Battleship;
+[CustomParams]
+	{
+		RequireTech=5 outpost;
+	}
+	footprintx=6;
+	footprintz=15;
+	maxdamage=15810;
+	objectname=nwdiowa.s3o;
+	side=SKIMMERS;
+	soundcategory=ship;
+	tedclass=SHIP;
+	brakerate=0.031;
+	movementclass=DBOAT6;
+	acceleration=0.036;
+	canmove=1;
+	maxvelocity=1.0;
+	turnrate=100;
+	canattack=1;
+	canstop=1;
+	floater=1;
+	idletime=1800;
+	idleautoheal=5;
+	radardistance=1000;
+	sightdistance=1500;
+	weapon1=artillery1_cannon;
+	 WeaponMainDir1=0 0 1;  
+	MaxAngleDif1=120;
+		weapon2=rapidflak3;
+	 WeaponMainDir2=1 0 0;  
+	MaxAngleDif2=220; 
+	weapon3=rapidflak3;
+		WeaponMainDir3=-1 0 0;  
+	MaxAngleDif3=220;     
+	weapon4=rapidflak3;
+	 WeaponMainDir4=1 0 0;  
+	MaxAngleDif4=220; 
+	weapon5=rapidflak3;
+		WeaponMainDir5=-1 0 0;  
+	MaxAngleDif5=220;     
+	
+	OnlyTargetCategory1=NOTAIR;
+	OnlyTargetCategory2=VTOL;
+	OnlyTargetCategory3=VTOL;
+	OnlyTargetCategory4=VTOL;
+	OnlyTargetCategory5=VTOL;
+	
+	
+	explodeas=BIG_UNITEX;
+	selfdestructas=BIG_UNIT;
+	category=SKIMMERS SHIP NOTAIR ;
+	minwaterdepth=15;
+	corpse=;
+	smoothanim=1;
+	icontype=sea;
+	bmcode=1;
+	noautofire=0;
+	buildangle=16384;
+	seismicsignature=0;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=Standby;
+	canpatrol=1;
+	mobilestandorders=1;
+	standingmoveorder=1;
+	canguard=1;
+	steeringmode=1;
+	maneuverleashlength=3000;
+	
+	
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 8 2;
+ 	collisionVolumeScales = 36 40 300;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

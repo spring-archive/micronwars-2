@@ -1,0 +1,69 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=NWDA10;
+	Side=NWD;
+	Objectname=NWDA10.s3o;
+	Name=A-10 thunderbolt II;
+	Description=support aircraft;
+	[CustomParams]
+	{
+		RequireTech= 4 outpost;
+	}
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=4500;
+	BuildCostMetal=1300;
+	MaxDamage=1800;
+	BuildTime=13000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=1000;
+	SoundCategory=Plane;
+	ExplodeAs=SMALL_UNIT;
+	SelfDestructAs=SMALL_UNIT;
+	Category=SKIMMERS VTOL;
+	TEDClass=VTOL;
+	Corpse=;
+	firestandorders=1;
+	StandingFireOrder=0;
+	mobilestandorders=1;
+	StandingMoveOrder=1;
+	collide=0;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	MaxVelocity=6.8;
+	BrakeRate=4;
+	Acceleration=0.15;
+	TurnRate=100;  
+	SteeringMode=1;
+	ShootMe=1;
+	Canfly=1;
+	cruisealt=300; 
+	BankScale=1;
+	DefaultMissionType=VTOL_standby;
+	maneuverleashlength=2000;
+	Weapon1=Gau-8B;
+	OnlyTargetCategory1=NOTAIR;
+	WeaponMainDir1= 0 0 1;
+	MaxAngleDif1=20;
+	Weapon2=mk-82;
+	OnlyTargetCategory2=NOTAIR;
+	canattack=1;
+	autoheal=0;
+	attackrunlength=1200;
+	CanDropFlare=1;
+	FlareReload=5;
+	FlareEfficieny=0.6;
+	FlareSalvoSize=8;
+	FlareSalvoDelay=0.3;
+	FlareDropVector=0 -1 -1;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 1 -1;
+ 	 collisionVolumeScales = 12 8 37;
+  	collisionVolumeTest = 1;
+}

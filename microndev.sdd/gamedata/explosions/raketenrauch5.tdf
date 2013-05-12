@@ -1,0 +1,106 @@
+[raketenrauch5]
+{
+
+
+
+//Lang,Graulich,geringe streuung
+
+
+	[circle]
+	{
+		class=CSimpleParticleSystem;
+		[properties] {
+			sizegrowth=0;
+			sizemod=1;
+			pos=0, 0, 0;
+			emitVector=0,1,0;
+			gravity=0, 0, 0;
+			Texture=smokesmall;
+			colorMap=1 .8 0 1   .5 .5 .5 1;
+			airdrag=.9;
+			particleLife=4;
+			particleLifeSpread=8;
+			numParticles=2;
+			particleSpeed=0;
+			particleSpeedSpread=0;
+			particleSize=8;
+			particleSizeSpread=5;
+			emitRot=0;
+			emitRotSpread=360;
+			directional=0;
+
+		}
+		air=1;
+		ground=1;
+		water=1;
+		count=1;
+	}
+
+
+	[dirt2]
+	{
+	class=CSimpleParticleSystem;
+
+		[properties]
+		{
+
+		Texture=smokesmall;
+		sizeGrowth=0.0;
+		sizeMod=1;
+
+        	pos 		= 0, 0, 0;
+         	emitVector	= 0, 1, 0;
+		gravity		= 0, 0, 0;
+
+		colorMap	= .5 .5 .5 .3   .5 .5 .5 1   .2 .2 .2 1  	0 0 0 0.01;
+		airdrag		= 0.8;
+
+		particleLife=500;
+		particleLifeSpread=10;
+		
+		numParticles=2;
+
+		particleSpeed=0;
+		particleSpeedSpread=1;
+		particleSize=6;
+		particleSizeSpread=6;
+
+		emitRot=0;
+		emitRotSpread=300;
+
+		directional=0;
+
+		}
+	water=1;
+	count=1;
+        Air=1;
+        ground=1;
+	}
+
+
+
+
+
+	[Yuped]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+
+		  texture=groundflash;
+		  size=20;
+		  sizeGrowth=-1.0;
+		  ttl=20;
+	          colorMap= 1 .4 0 1  0 0 0 0;
+		}
+    	air=0;
+    	ground=1;
+    	water=1;
+	count=1;
+	}
+
+
+
+
+
+}

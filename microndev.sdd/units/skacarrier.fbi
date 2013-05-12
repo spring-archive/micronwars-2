@@ -1,0 +1,80 @@
+[UNITINFO]
+	{
+	name=Fleetcommander;
+	unitname=skacarrier;
+	buildcostenergy=44550;
+	buildcostmetal=4455;
+	buildtime=98500;
+	category=SKIMMERS SHIP NOTAIR ;
+	description=Aircraft Carrier;
+[CustomParams]
+	{
+		RequireTech= 3 outpost;
+	}
+	footprintx=8;
+	footprintz=25;
+	maxdamage=23715;
+	objectname=skacarrier.s3o;
+	side=SKIMMERS;
+	soundcategory=ship;
+	tedclass=SHIP;
+	brakerate=0.031;
+	movementclass=DBOAT6;
+	acceleration=0.036;
+	canmove=1;
+	maxvelocity=2.88;
+	turnrate=310;
+	builder=1;
+	workertime=500;
+	energymake=100;
+	energystorage=0;
+	energyuse=48;
+	metalstorage=0;
+	canattack=1;
+	canstop=1;
+	floater=1;
+	idletime=1800;
+	idleautoheal=5;
+	sightdistance=455;
+	weapon1=mfrigateaamissile;
+	weapon2=mfrigateaamissile;
+	weapon3=phalanx;
+	weapon4=phalanx;
+	onlytargetcategory1=VTOL;
+	
+	onlytargetcategory3=VTOL;
+	onlytargetcategory4=VTOL;
+	NoChaseCategory=outpost NOTAIR MINERALS;
+	BadTargetCategory=outpost;
+	explodeas=BIG_UNITEX;
+	selfdestructas=BIG_UNIT;
+	
+	isairbase=1;
+	
+	minwaterdepth=15;
+	corpse=;
+	smoothanim=1;
+	icontype=sea;
+	bmcode=1;
+	noautofire=0;
+	buildangle=16384;
+	seismicsignature=0;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=Standby;
+	canpatrol=1;
+	mobilestandorders=1;
+	standingmoveorder=1;
+	canguard=1;
+	steeringmode=1;
+	maneuverleashlength=640;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 12 6;
+ 	collisionVolumeScales = 146 28 410;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

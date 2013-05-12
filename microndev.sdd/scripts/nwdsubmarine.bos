@@ -1,0 +1,159 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  body,rotor, torp1, torp2; 
+static-var    restore_delay , shooting_num;
+
+
+
+#define SIG_AIM				2
+#define SIG_AIM_2			4
+
+
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from body;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+
+
+Create()
+{
+	restore_delay = 5000;
+	shooting_num=1;
+
+	start-script SmokeUnit();
+}
+
+
+
+
+StartMoving()
+{
+
+		spin rotor around z-axis speed <5000.0000000>;
+		
+		
+	
+}
+
+StopMoving()
+{
+	
+	stop-spin rotor around z-axis  decelerate <50.0000000>;
+}
+
+
+
+
+
+
+
+AimWeapon1(heading, pitch)
+{
+	signal SIG_AIM;
+	set-signal-mask SIG_AIM;
+	
+	
+
+	
+	return (1);
+	
+}
+
+
+
+
+
+FireWeapon1()
+{
+
+}
+
+
+
+
+
+
+AimFromWeapon1(piecenum)
+{
+	piecenum = body;
+}
+
+
+
+
+
+
+QueryWeapon1(piecenum)
+{
+if (shooting_num==1)
+{
+piecenum=torp1;
+}
+
+if (shooting_num==2)
+{
+piecenum=torp2;
+}
+}
+
+
+
+
+
+
+SweetSpot(piecenum)
+{
+	piecenum = body;
+}
+
+Killed(severity, corpsetype)
+{
+	
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		
+		explode body type BITMAPONLY | BITMAP2;
+		
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		
+		explode body type BITMAPONLY | BITMAP2;
+		
+		return (0);
+	}
+	corpsetype = 3;
+	
+	explode body type BITMAPONLY | BITMAP2;
+}

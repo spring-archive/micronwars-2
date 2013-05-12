@@ -1,0 +1,49 @@
+[hellfire]
+	{
+	
+	name=anti tank missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+	ToAirWeapon=0;
+	Togroundweapon=1;
+     
+	model=hellfire.s3o;
+
+	weapontimer=5;
+	flighttime=10;
+        range=900;
+	reloadtime=3;
+	weaponvelocity=500;
+	startvelocity=200;
+	weaponacceleration=100;
+	turnrate=2000;
+	areaofeffect=128;
+	trajectoryheight=0.8;
+    	tolerance=1000;
+	pitchtolerance=12000;
+    	
+	soundstart=clustermmech/mechmissilefire;
+	soundhit=xplosml2;
+
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch;
+	explosiongenerator=custom:MittleGrosseExplosion;
+
+
+	[DAMAGE]
+		{
+		default=900;
+		
+		
+} 
+	}
+
+

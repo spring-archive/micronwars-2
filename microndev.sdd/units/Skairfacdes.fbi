@@ -1,0 +1,51 @@
+// Copyrighted : Razorblade;
+[UNITINFO]
+	{
+	UnitName=SKairfacdes;
+	Version=1;
+	Side=Skimmers;
+	Objectname=SKairpaddes.s3o;
+	Designation=CE-GPP;
+	Name=Air Factory;
+	Description=Builds air units;
+	
+	FootprintX=28;
+	FootprintZ=15;
+	BuildCostEnergy=2000;
+	BuildCostMetal=600;
+	MaxDamage=1400;
+	MaxWaterDepth=0;
+	MaxSlope=35;
+	EnergyUse=0;
+	BuildTime=6800;
+	WorkerTime=250;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=450;
+	RadarDistance=800;
+	SoundCategory=airfacsk;
+	ExplodeAs=BIG_UNITEX;
+	SelfDestructAs=ESTOR_BUILDINGEX;
+	Category=SKIMMERS FACTORY NOWEAPON NOTAIR NOTSUB ;
+	TEDClass=PLANT;
+	Corpse=skairpad_dead;
+	CanRepeat=1;
+	YardMap=oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo oooooooooooooooooooooooooooo;
+	icontype=bigbuilding;
+	UnitNumber=7733;
+	
+	ActivateWhenBuilt=1;
+	Ovradjust=1;
+	shownanospray=false;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = -73 -21 0;
+ 	 collisionVolumeScales = 436 57 241;
+  	collisionVolumeTest = 1;
+	autoheal=0;
+	canbeassisted=0;
+	
+	}
+

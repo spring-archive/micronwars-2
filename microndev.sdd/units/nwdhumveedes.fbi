@@ -1,0 +1,60 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=nwdhumveedes;
+	Version=1;
+	Side=NWD;
+	Objectname=NWDM1025Humveedes.s3o;
+	Designation=NWD;
+	Name=M1025 Humvee;
+	Description=scout vehicle ;
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=500;
+	BuildCostMetal=100;
+	MaxDamage=210;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	BuildTime=2500;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=500;
+	SoundCategory=scout;
+	Category=NWD TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	Corpse=NWDM1025Humvee_dead;
+	UnitNumber=4;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	commandfore=0;
+	mass=8000;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	MaxVelocity=3.0;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=1030;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK2;
+	Upright=0;
+	autoheal=0;
+	HideDamage=0;
+	ImmuneToParalyzer=0;
+	weapon1=NWD50calgun;
+	BadTargetCategory=NEUTRAL MINERALS;
+	NoChaseCategory=NEUTRAL MINERALS;
+	OnlyTargetCategory=NOTAIR;
+	Armortype=MEDIUM;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 2 -2;
+ 	 collisionVolumeScales = 14 11 30;
+  	collisionVolumeTest = 1;
+	
+}

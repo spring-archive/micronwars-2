@@ -1,0 +1,73 @@
+[raketenrauch]
+{
+
+
+
+		[dirt2]
+	{
+	class=CSimpleParticleSystem;
+
+		[properties]
+		{
+
+		Texture=smokesmall;
+		sizeGrowth=0.0;
+		sizeMod=1;
+
+        	pos 		= 0, 0, 0;
+         	emitVector	= 0, 0, 0;
+		gravity		= 0, 0, 0;
+
+		colorMap	= 1 1 1 1	1 1 1 1		0 0 0 0.01;
+		airdrag		= 0.8;
+
+		particleLife=150;
+		particleLifeSpread=8;
+
+		numParticles=1;
+
+		particleSpeed=0;
+		particleSpeedSpread=0;
+		particleSize=8;
+		particleSizeSpread=2;
+
+		emitRot=0;
+		emitRotSpread=0;
+
+		directional=0;
+		useAirLos=1;
+		}
+	water=1;
+	count=1;
+        Air=1;
+        ground=1;
+	}
+
+
+
+
+
+
+	[Yuped]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+
+		  texture=groundflash;
+		  size=2.0;
+		  sizeGrowth=-1.0;
+		  ttl=1;
+	          colorMap= 1 1 1 1  0 0 0 0;
+		}
+    	air=0;
+    	ground=1;
+    	water=1;
+	count=1;
+	}
+
+
+
+
+
+}

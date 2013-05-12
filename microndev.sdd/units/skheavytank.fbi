@@ -1,0 +1,69 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=skheavytank;
+	Version=1;
+	Side=Skimmers;
+	Objectname=skheavytank.s3o;
+	Designation=Skimmers;
+	Name=Palladin;
+	Description=heavy Raider tank;
+	[CustomParams]
+	{
+		RequireTech=4 outpost;
+		
+	}
+	FootprintX=2;
+	FootprintZ=4;
+	BuildCostEnergy=10000;
+	BuildCostMetal=4500;
+	MaxDamage=4500;
+	MaxWaterDepth=35;
+	MaxSlope=40;
+	EnergyUse=25;
+	BuildTime=24000;
+	mass=60000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=800;
+	SoundCategory=Heavytank;
+	Category=SKIMMERS TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	//Corpse=skultratank_dead;
+	UnitNumber=4;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	canattack=1;
+	MaxVelocity=1.4;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=600;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK3;
+	Upright=0;
+	autoheal=0;
+	HideDamage=0;
+	ImmuneToParalyzer=0;
+	weapon1=heavy_cannon;
+	OnlyTargetCategory1=NOTAIR;
+	BadTargetCategory=VTOL;
+	NoChaseCategory=NEUTRAL VTOL MINERALS;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 4 1;
+ 	 collisionVolumeScales = 25 14 56;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

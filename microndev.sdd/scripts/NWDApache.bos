@@ -1,0 +1,659 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  body, turret, sleeve, barrel, flare, trotor, brotor1, brotor2, hfire1, hfire2, hfire3, hfire4, hfire5, 
+       hfire6, hfire7, hfire8, rocket1, rocket2, rocket3, rocket4, rocket5, rocket6, rocket7, rocket8, rocket9, 
+	   rocket10, rocket11, rocket12, rocket13, rocket14, rocket15, rocket16, rocket17, rocket18, rocket19,
+	   rocket20, rocket21, rocket22, rocket23, rocket24, rocket25, rocket26, rocket27, rocket28, rocket29, 
+	   rocket30, rocket31, rocket32;
+
+static-var  restore_delay, Reload1, Reload2, shooting_num, shooting_num2;
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from body;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+Create()
+{
+	shooting_num=1;
+	shooting_num2=1;
+	Reload1 = 8;
+	Reload2 = 32;
+	restore_delay=10000;
+	start-script SmokeUnit();
+}
+
+StartMoving()
+{
+	
+	spin trotor around y-axis speed <4000.000000>;
+	spin brotor1 around x-axis speed <4000.000000>;
+	spin brotor2 around x-axis speed <4000.000000>;
+}
+
+StopMoving()
+{
+	stop-spin trotor around y-axis decelerate <10.000000>;
+	stop-spin brotor1 around x-axis decelerate <10.000000>;
+	stop-spin brotor2 around x-axis decelerate <10.000000>;
+
+}
+
+Hellfire()
+{
+	sleep 5000;
+	show hfire1;
+	sleep 3500;
+	show hfire2;
+	sleep 3500;
+	show hfire3;
+	sleep 3500;
+	show hfire4;
+	sleep 3500;
+	show hfire5;
+	sleep 3500;
+	show hfire6;
+	sleep 3500;
+	show hfire7;
+	sleep 3500;
+	show hfire8;
+	sleep 6500;
+	Reload1 = 8;
+}
+
+Rockets()
+{
+	sleep 5000;
+	show rocket1;
+	sleep 3500;
+	show rocket2;
+	sleep 3500;
+	show rocket3;
+	sleep 3500;
+	show rocket4;
+	sleep 3500;
+	show rocket5;
+	sleep 3500;
+	show rocket6;
+	sleep 3500;
+	show rocket7;
+	sleep 3500;
+	show rocket8;
+	sleep 3500;
+	show rocket9;
+	sleep 3500;
+	show rocket10;
+	sleep 3500;
+	show rocket11;
+	sleep 3500;
+	show rocket12;
+	sleep 3500;
+	show rocket13;
+	sleep 3500;
+	show rocket14;
+	sleep 3500;
+	show rocket15;
+	sleep 3500;
+	show rocket16;
+	sleep 3500;
+	show rocket17;
+	sleep 3500;
+	show rocket18;
+	sleep 3500;
+	show rocket19;
+	sleep 3500;
+	show rocket20;
+	sleep 3500;
+	show rocket21;
+	sleep 3500;
+	show rocket22;
+	sleep 3500;
+	show rocket23;
+	sleep 3500;
+	show rocket24;
+	sleep 3500;
+	show rocket25;
+	sleep 3500;
+	show rocket26;
+	sleep 3500;
+	show rocket27;
+	sleep 3500;
+	show rocket28;
+	sleep 3500;
+	show rocket29;
+	sleep 3500;
+	show rocket30;
+	sleep 3500;
+	show rocket31;
+	sleep 3500;
+	show rocket32;
+	sleep 5000;
+	Reload2 = 32;
+}
+
+RestoreAfterDelay()
+{
+	sleep restore_delay;
+	turn turret to y-axis <0.000000> speed <20.000000>;
+	turn sleeve to x-axis <0.000000> speed <5.000000>;
+}
+
+AimWeapon1(heading, pitch)
+{
+	signal 2;
+	set-signal-mask 2;
+	turn turret to y-axis heading speed <40.000000>;
+	turn sleeve to x-axis <0.000000> - pitch speed <35.000000>;
+	wait-for-turn turret around y-axis;
+	wait-for-turn sleeve around x-axis;
+	start-script RestoreAfterDelay();
+	return (1);
+}
+
+AimWeapon2(heading, pitch)
+{
+	signal 4;
+	set-signal-mask 4;
+	if( Reload1 < 1 )
+	{
+		sleep 800;
+	}
+	if( Reload1 > 0 )
+	{
+		return (1);
+	}
+}
+
+AimWeapon3(heading, pitch)
+{
+	signal 8;
+	set-signal-mask 8;
+	if( Reload2 < 1 )
+	{
+		sleep 800;
+	}
+	if( Reload2 > 0 )
+	{
+		return (1);
+	}
+}
+
+FireWeapon1()
+{
+
+}
+
+FireWeapon2()
+{
+	--Reload1;
+	if( Reload1 == 0 )
+	{
+		start-script Hellfire();
+	}
+	if(shooting_num==1)
+	{
+	hide hfire1;
+	}
+
+	if(shooting_num==2)
+	{
+	hide hfire2;
+	}
+	if(shooting_num==3)
+	{
+	hide hfire3;
+	}
+
+	if(shooting_num==4)
+	{
+	hide hfire4;
+	}
+		if(shooting_num==5)
+	{
+	hide hfire5;
+	}
+
+	if(shooting_num==6)
+	{
+	hide hfire6;
+	}
+		if(shooting_num==7)
+	{
+	hide hfire7;
+	}
+
+	if(shooting_num==8)
+	{
+	hide hfire8;
+	}
+
+	shooting_num=shooting_num+1;
+
+	if( shooting_num == 9)
+	{
+	shooting_num=1;
+}
+
+}
+
+FireWeapon3()
+{
+	--Reload2;
+	if( Reload2 == 0 )
+	{
+		start-script Rockets();
+	}
+	if(shooting_num2==1)
+	{
+	hide rocket1;
+	}
+
+	if(shooting_num2==2)
+	{
+	hide rocket2;
+	}
+	if(shooting_num2==3)
+	{
+	hide rocket3;
+	}
+
+	if(shooting_num2==4)
+	{
+	hide rocket4;
+	}
+	if(shooting_num2==5)
+	{
+	hide rocket5;
+	}
+
+	if(shooting_num2==6)
+	{
+	hide rocket6;
+	}
+	if(shooting_num2==7)
+	{
+	hide rocket7;
+	}
+
+	if(shooting_num2==8)
+	{
+	hide rocket8;
+	}
+	if(shooting_num2==9)
+	{
+	hide rocket9;
+	}
+
+	if(shooting_num2==10)
+	{
+	hide rocket10;
+	}
+	if(shooting_num2==11)
+	{
+	hide rocket11;
+	}
+
+	if(shooting_num2==12)
+	{
+	hide rocket12;
+	}
+	if(shooting_num2==13)
+	{
+	hide rocket13;
+	}
+
+	if(shooting_num2==14)
+	{
+	hide rocket14;
+	}
+	if(shooting_num2==15)
+	{
+	hide rocket15;
+	}
+
+	if(shooting_num2==16)
+	{
+	hide rocket16;
+	}
+	if(shooting_num2==17)
+	{
+	hide rocket17;
+	}
+
+	if(shooting_num2==18)
+	{
+	hide rocket18;
+	}
+	if(shooting_num2==19)
+	{
+	hide rocket19;
+	}
+
+	if(shooting_num2==20)
+	{
+	hide rocket20;
+	}
+	if(shooting_num2==21)
+	{
+	hide rocket21;
+	}
+
+	if(shooting_num2==22)
+	{
+	hide rocket22;
+	}
+	if(shooting_num2==23)
+	{
+	hide rocket23;
+	}
+
+	if(shooting_num2==24)
+	{
+	hide rocket24;
+	}
+	if(shooting_num2==25)
+	{
+	hide rocket25;
+	}
+
+	if(shooting_num2==26)
+	{
+	hide rocket26;
+	}
+	if(shooting_num2==27)
+	{
+	hide rocket27;
+	}
+
+	if(shooting_num2==28)
+	{
+	hide rocket28;
+	}
+	if(shooting_num2==29)
+	{
+	hide rocket29;
+	}
+
+	if(shooting_num2==30)
+	{
+	hide rocket30;
+	}
+	if(shooting_num2==31)
+	{
+	hide rocket31;
+	}
+
+	if(shooting_num2==32)
+	{
+	hide rocket32;
+	}
+	shooting_num=shooting_num2+1;
+
+	if( shooting_num2 == 33)
+	{
+	shooting_num2=1;
+}
+
+}
+
+AimFromWeapon2(piecenum)
+{
+	piecenum = body;
+}
+
+AimFromWeapon3(piecenum)
+{
+	piecenum = body;
+}
+
+AimFromWeapon1(piecenum)
+{
+	piecenum = turret;
+}
+
+QueryWeapon1(piecenum)
+{
+	piecenum = flare;
+}
+
+QueryWeapon2(piecenum)
+{
+	if (shooting_num==1)
+	{
+	piecenum=hfire1;
+	}
+
+	if (shooting_num==2)
+	{
+	piecenum=hfire2;
+	}
+	if (shooting_num==3)
+	{
+	piecenum=hfire3;
+	}
+
+	if (shooting_num==4)
+	{
+	piecenum=hfire4;
+	}
+	if (shooting_num==5)
+	{
+	piecenum=hfire5;
+	}
+
+	if (shooting_num==6)
+	{
+	piecenum=hfire6;
+	}
+	if (shooting_num==7)
+	{
+	piecenum=hfire7;
+	}
+
+	if (shooting_num==8)
+	{
+	piecenum=hfire8;
+	}
+}
+
+QueryWeapon3(piecenum)
+{
+	if (shooting_num2==1)
+	{
+	piecenum=rocket1;
+	}
+
+	if (shooting_num2==2)
+	{
+	piecenum=rocket2;
+	}
+	if (shooting_num2==3)
+	{
+	piecenum=rocket3;
+	}
+
+	if (shooting_num2==4)
+	{
+	piecenum=rocket4;
+	}
+	if (shooting_num2==5)
+	{
+	piecenum=rocket5;
+	}
+
+	if (shooting_num2==6)
+	{
+	piecenum=rocket6;
+	}
+	if (shooting_num2==7)
+	{
+	piecenum=rocket7;
+	}
+
+	if (shooting_num2==8)
+	{
+	piecenum=rocket8;
+	}
+	if (shooting_num2==9)
+	{
+	piecenum=rocket9;
+	}
+
+	if (shooting_num2==10)
+	{
+	piecenum=rocket10;
+	}
+	if (shooting_num2==11)
+	{
+	piecenum=rocket11;
+	}
+
+	if (shooting_num2==12)
+	{
+	piecenum=rocket12;
+	}
+	if (shooting_num2==13)
+	{
+	piecenum=rocket13;
+	}
+
+	if (shooting_num2==14)
+	{
+	piecenum=rocket14;
+	}
+	if (shooting_num2==15)
+	{
+	piecenum=rocket15;
+	}
+
+	if (shooting_num2==16)
+	{
+	piecenum=rocket16;
+	}
+	if (shooting_num2==17)
+	{
+	piecenum=rocket17;
+	}
+
+	if (shooting_num2==18)
+	{
+	piecenum=rocket18;
+	}
+	if (shooting_num2==19)
+	{
+	piecenum=rocket19;
+	}
+
+	if (shooting_num2==20)
+	{
+	piecenum=rocket20;
+	}
+	if (shooting_num2==21)
+	{
+	piecenum=rocket21;
+	}
+
+	if (shooting_num2==22)
+	{
+	piecenum=rocket22;
+	}
+	if (shooting_num2==23)
+	{
+	piecenum=rocket23;
+	}
+
+	if (shooting_num2==24)
+	{
+	piecenum=rocket24;
+	}
+	if (shooting_num2==25)
+	{
+	piecenum=rocket25;
+	}
+
+	if (shooting_num2==26)
+	{
+	piecenum=rocket26;
+	}
+	if (shooting_num2==27)
+	{
+	piecenum=rocket27;
+	}
+
+	if (shooting_num2==28)
+	{
+	piecenum=rocket28;
+	}
+	if (shooting_num2==29)
+	{
+	piecenum=rocket29;
+	}
+
+	if (shooting_num2==30)
+	{
+	piecenum=rocket30;
+	}
+	if (shooting_num2==31)
+	{
+	piecenum=rocket31;
+	}
+
+	if (shooting_num2==32)
+	{
+	piecenum=rocket32;
+	}
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = body;
+}
+
+Killed(severity, corpsetype)
+{
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode body type BITMAPONLY | BITMAP1;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode body type SHATTER | BITMAP1;
+		return (0);
+	}
+	if( severity <= 100 )
+	{
+		corpsetype = 3;
+		explode body type SHATTER | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	}
+	corpsetype = 3;
+	explode body type SHATTER | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+}

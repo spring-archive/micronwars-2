@@ -1,0 +1,344 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  body, radar, mturret1, msleeve1, mflare10, mflare11, mflare12, mflare13,
+       mflare14, mflare15, mflare16, mflare17, mturret2, msleeve2, mflare20, mflare21,
+       mflare22, mflare23, mflare24, mflare25, mflare26, mflare27, pturret1, psleeve1,
+       pbarrel1, pflare1, pturret2, psleeve2, pbarrel2, pflare2, pad1, pad2,
+       wake1, wake2, pad3, pad4;
+
+static-var  Static_Var_1, Static_Var_2, Static_Var_3, Static_Var_4;
+
+// Signal definitions
+#define SIG_MOVE			8
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( TRUE )
+	{
+		sleep 400;
+	}
+	while( TRUE )
+	{
+		healthpercent = 4;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from body;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+Create()
+{
+	Static_Var_4 = 1;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 1000;
+	}
+	spin radar around y-axis speed <30.000000>;
+	Static_Var_3 = 10000;
+	start-script SmokeUnit();
+}
+
+RestoreWeapon1()
+{
+	sleep Static_Var_3;
+	turn mturret1 to y-axis <0.000000> speed <55.000000>;
+	turn msleeve1 to x-axis <0.000000> speed <55.000000>;
+}
+
+RestoreWeapon2()
+{
+	sleep Static_Var_3;
+	turn mturret2 to y-axis <0.000000> speed <55.000000>;
+	turn msleeve2 to x-axis <0.000000> speed <55.000000>;
+}
+
+RestoreWeapon3()
+{
+	sleep Static_Var_3;
+	turn pturret1 to y-axis <0.000000> speed <100.000000>;
+	turn psleeve1 to x-axis <0.000000> speed <100.000000>;
+}
+
+RestoreWeapon4()
+{
+	sleep Static_Var_3;
+	turn pturret2 to y-axis <0.000000> speed <100.000000>;
+	turn psleeve2 to x-axis <0.000000> speed <100.000000>;
+}
+
+StartMoving()
+{
+	signal SIG_MOVE;
+	set-signal-mask SIG_MOVE;
+	while( TRUE )
+	{
+		emit-sfx 2 from wake1;
+		emit-sfx 2 from wake2;
+		sleep 300;
+	}
+}
+
+StopMoving()
+{
+	signal SIG_MOVE;
+}
+
+AimWeapon1(Func_Var_1, Func_Var_2)
+{
+	signal 2;
+	set-signal-mask 2;
+	turn mturret1 to y-axis Func_Var_1 speed <55.000000>;
+	turn msleeve1 to x-axis <0.000000> - Func_Var_2 speed <55.000000>;
+	wait-for-turn mturret1 around y-axis;
+	wait-for-turn msleeve1 around x-axis;
+	start-script RestoreWeapon1();
+	return (1);
+}
+
+AimWeapon2(Func_Var_1, Func_Var_2)
+{
+	signal 4;
+	set-signal-mask 4;
+	turn mturret2 to y-axis Func_Var_1 speed <55.000000>;
+	turn msleeve2 to x-axis <0.000000> - Func_Var_2 speed <30.000000>;
+	wait-for-turn mturret2 around y-axis;
+	wait-for-turn msleeve2 around x-axis;
+	start-script RestoreWeapon2();
+	return (1);
+}
+
+AimWeapon3(Func_Var_1, Func_Var_2)
+{
+	signal 16;
+	set-signal-mask 16;
+	turn pturret1 to y-axis Func_Var_1 speed <100.000000>;
+	turn psleeve1 to x-axis <0.000000> - Func_Var_2 speed <100.000000>;
+	wait-for-turn pturret1 around y-axis;
+	wait-for-turn psleeve1 around x-axis;
+	start-script RestoreWeapon3();
+	return (1);
+}
+
+AimWeapon4(Func_Var_1, Func_Var_2)
+{
+	signal 32;
+	set-signal-mask 32;
+	turn pturret2 to y-axis Func_Var_1 speed <100.000000>;
+	turn psleeve2 to x-axis <0.000000> - Func_Var_2 speed <100.000000>;
+	wait-for-turn pturret2 around y-axis;
+	wait-for-turn psleeve2 around x-axis;
+	start-script RestoreWeapon4();
+	return (1);
+}
+
+FireWeapon1()
+{
+	++Static_Var_1;
+	if( Static_Var_1 == 8 )
+	{
+		Static_Var_1 = 2;
+	}
+}
+
+FireWeapon2()
+{
+	++Static_Var_2;
+	if( Static_Var_2 == 8 )
+	{
+		Static_Var_2 = 11;
+	}
+}
+
+FireWeapon3()
+{
+	spin pbarrel1 around z-axis speed <1000.000000>;
+	emit-sfx 256 | 1 from pflare1;
+	stop-spin pbarrel1 around z-axis decelerate <10.000000>;
+}
+
+FireWeapon4()
+{
+	spin pbarrel2 around z-axis speed <1000.000000>;
+	emit-sfx 256 | 1 from pflare2;
+	stop-spin pbarrel2 around z-axis decelerate <10.000000>;
+}
+
+AimFromWeapon1(Func_Var_1)
+{
+	Func_Var_1 = 2;
+}
+
+QueryWeapon1(Func_Var_1)
+{
+	if( Static_Var_1 == 1 )
+	{
+		Func_Var_1 = 4;
+	}
+	if( Static_Var_1 == 2 )
+	{
+		Func_Var_1 = 5;
+	}
+	if( Static_Var_1 == 3 )
+	{
+		Func_Var_1 = 6;
+	}
+	if( Static_Var_1 == 4 )
+	{
+		Func_Var_1 = 7;
+	}
+	if( Static_Var_1 == 5 )
+	{
+		Func_Var_1 = 8;
+	}
+	if( Static_Var_1 == 6 )
+	{
+		Func_Var_1 = 9;
+	}
+	if( Static_Var_1 == 7 )
+	{
+		Func_Var_1 = 10;
+	}
+	if( Static_Var_1 == 8 )
+	{
+		Func_Var_1 = 11;
+	}
+}
+
+AimFromWeapon2(Func_Var_1)
+{
+	Func_Var_1 = 12;
+}
+
+QueryWeapon2(Func_Var_1)
+{
+	if( Static_Var_1 == 1 )
+	{
+		Func_Var_1 = 14;
+	}
+	if( Static_Var_1 == 2 )
+	{
+		Func_Var_1 = 15;
+	}
+	if( Static_Var_1 == 3 )
+	{
+		Func_Var_1 = 16;
+	}
+	if( Static_Var_1 == 4 )
+	{
+		Func_Var_1 = 17;
+	}
+	if( Static_Var_1 == 5 )
+	{
+		Func_Var_1 = 18;
+	}
+	if( Static_Var_1 == 6 )
+	{
+		Func_Var_1 = 19;
+	}
+	if( Static_Var_1 == 7 )
+	{
+		Func_Var_1 = 20;
+	}
+	if( Static_Var_1 == 8 )
+	{
+		Func_Var_1 = 21;
+	}
+}
+
+AimFromWeapon3(Func_Var_1)
+{
+	Func_Var_1 = 22;
+}
+
+QueryWeapon3(Func_Var_1)
+{
+	Func_Var_1 = 25;
+}
+
+AimFromWeapon4(Func_Var_1)
+{
+	Func_Var_1 = 26;
+}
+
+QueryWeapon4(Func_Var_1)
+{
+	Func_Var_1 = 29;
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = body;
+}
+
+QueryLandingPad(Func_Var_1, Func_Var_2, Func_Var_3, Func_Var_4)
+{
+	Func_Var_1 = 35;
+	Func_Var_2 = 34;
+	Func_Var_3 = 31;
+	Func_Var_4 = 30;
+	var Func_Var_5, Func_Var_6;
+	++Static_Var_4;
+	if( Static_Var_4 >= 5 )
+	{
+		Static_Var_4 = 1;
+	}
+	Func_Var_5 = 1;
+	while( Func_Var_5 <= Static_Var_4 )
+	{
+		Func_Var_6 = Func_Var_1;
+		Func_Var_1 = Func_Var_2;
+		Func_Var_2 = Func_Var_3;
+		Func_Var_3 = Func_Var_4;
+		Func_Var_4 = Func_Var_6;
+		++Func_Var_5;
+	}
+}
+
+Killed(severity, corpsetype)
+{
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode body type BITMAPONLY | BITMAP1;
+		explode mturret1 type BITMAPONLY | BITMAP2;
+		explode pturret1 type BITMAPONLY | BITMAP3;
+		explode pturret2 type BITMAPONLY | BITMAP4;
+		explode mturret2 type BITMAPONLY | BITMAP5;
+		explode radar type BITMAPONLY | BITMAP1;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode body type FALL | EXPLODE_ON_HIT | BITMAP1;
+		explode mturret1 type FALL | EXPLODE_ON_HIT | BITMAP2;
+		explode pturret1 type FALL | EXPLODE_ON_HIT | BITMAP3;
+		explode pturret2 type FALL | EXPLODE_ON_HIT | BITMAP4;
+		explode mturret2 type FALL | EXPLODE_ON_HIT | BITMAP5;
+		explode radar type FALL | EXPLODE_ON_HIT | BITMAP1;
+		return (0);
+	}
+	corpsetype = 3;
+	explode body type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	explode mturret1 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+	explode pturret1 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	explode pturret2 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+	explode mturret2 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+	explode radar type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+}

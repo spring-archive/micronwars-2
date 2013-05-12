@@ -1,0 +1,18 @@
+[hawkmissile_dead]
+{
+	world=All Worlds;
+	description=hawk battery Wreckage;
+	category=corpses;
+	object=hawkmissilewreck.S3O;
+	footprintx=4;
+	footprintz=4;
+	height=10;
+	blocking=1;
+	hitdensity=100;
+	metal=200;
+	damage=500;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=450;
+}

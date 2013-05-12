@@ -1,0 +1,70 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=skbarragerdes;
+	Version=1;
+	Side=Skimmers;
+	Objectname=skbarragerdes.s3o;
+	Designation=Skimmers;
+	Name=M-270 MLRS;
+	Description=long range missile battery;
+	[CustomParams]
+	{
+		RequireTech=5 outpost;
+		
+	}
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=8500;
+	BuildCostMetal=4000;
+	MaxDamage=1800;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	EnergyUse=25;
+	BuildTime=32000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=980;
+	SoundCategory=Ltank;
+	Category=SKIMMERS TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	
+	Corpse=skbarrager_dead;
+	UnitNumber=4;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	canattack=1;
+	MaxVelocity=0.8;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=200;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK2;
+	Upright=0;
+	autoheal=0;
+	HideDamage=0;
+	ImmuneToParalyzer=0;
+	weapon1=barragermissile;
+	NoChaseCategory=NEUTRAL  VTOL MINERALS;
+	BadTargetCategory=NEUTRAL;
+	OnlyTargetCategory=NOTAIR;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 4 -2;
+ 	 collisionVolumeScales = 15 16 37;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:smokexl2;
+	}
+	
+	
+}

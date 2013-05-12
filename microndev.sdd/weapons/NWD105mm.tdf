@@ -1,0 +1,33 @@
+[NWD105mm]
+	{
+	name=105 mm cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	size=0.3;
+	
+    range=1000;
+	reloadtime=20;
+	burst=5;
+	burstrate=0.5;
+	trajectoryheight=0.5;
+	startvelocity=1000;
+	weaponvelocity=1000;
+	areaofeffect=96;
+	accuracy=1000;
+	tolerance=1000;
+	
+	soundstart=nwdac105mmfire;
+	soundhit=nwdbradleygunexplo;
+
+   
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=900;
+		
+	
+    }
+	}

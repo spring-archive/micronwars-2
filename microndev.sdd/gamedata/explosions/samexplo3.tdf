@@ -1,0 +1,251 @@
+[samexplo3]
+{
+usedefaultexplosion=0;
+
+	[rauch] {
+		class=CSimpleParticleSystem;
+		[properties]{
+			sizeGrowth=0;
+			sizeMod=1.0;
+			pos=0, 1, 0;
+			emitVector=dir;
+			gravity=0, -0.2, 0;
+			colorMap=1 .4 0 1   1 .425 0 1   1 1 1 1   0 0 0 0.01;
+			Texture=smokesmall;
+			airdrag=0.97;
+			particleLife=15;
+			particleLifeSpread=20;
+			numParticles=40;
+			particleSpeed=3;
+			particleSpeedSpread=4;
+			particleSize=6;
+			particleSizeSpread=0;
+			emitRot=0;
+			emitRotSpread=20;
+			directional=1;
+		}
+		air=1;
+		ground=0;
+		count=1;
+	}
+	[bang] {
+		class=CSimpleParticleSystem;
+		[properties]{
+			sizeGrowth=0;
+			sizeMod=1.0;
+			pos=0, 1, 0;
+			emitVector=dir;
+			gravity=0, -0.2, 0;
+			colorMap=   1 1 1 1  0 0 0 0.01;
+			Texture=sparkexplo;
+			airdrag=0.97;
+			particleLife=8;
+			particleLifeSpread=4;
+			numParticles=6;
+			particleSpeed=3;
+			particleSpeedSpread=4;
+			particleSize=6;
+			particleSizeSpread=8;
+			emitRot=0;
+			emitRotSpread=20;
+			directional=1;
+		}
+		air=1;
+		ground=0;
+		count=1;
+	}
+
+	[bangluft] {
+		class=CSimpleParticleSystem;
+		[properties]{
+			sizeGrowth=0;
+			sizeMod=1.0;
+			pos=0, 1, 0;
+			emitVector=dir;
+			gravity=0, -0.2, 0;
+			colorMap=   1 1 0 1  0 0 0 0.01;
+			Texture=sparkexplo;
+			airdrag=0.97;
+			particleLife=10;
+			particleLifeSpread=17;
+			numParticles=4;
+			particleSpeed=0;
+			particleSpeedSpread=2;
+			particleSize=16;
+			particleSizeSpread=3;
+			emitRot=0;
+			emitRotSpread=20;
+			directional=1;
+		}
+		air=1;
+		ground=0;
+		count=1;
+	}
+
+
+	[rauch2] {
+		class=CSimpleParticleSystem;
+		[properties]{
+			sizeGrowth=0;
+			sizeMod=1.0;
+			pos=0, 1, 0;
+			emitVector=0,1,0;
+			gravity=0, -0.2, 0;
+			colorMap=   .4 .4 .4 1  0 0 0 0.01;
+			Texture=smokesmall;
+			airdrag=0.97;
+			particleLife=15;
+			particleLifeSpread=20;
+			numParticles=25;
+			particleSpeed=3;
+			particleSpeedSpread=4;
+			particleSize=6;
+			particleSizeSpread=4;
+			emitRot=0;
+			emitRotSpread=40;
+			directional=1;
+		}
+		air=0;
+		ground=1;
+		count=1;
+	}
+
+	[bang2] {
+		class=CSimpleParticleSystem;
+		[properties]{
+			sizeGrowth=0;
+			sizeMod=1.0;
+			pos=0, 1, 0;
+			emitVector=0,1,0;
+			gravity=0, -0.2, 0;
+			colorMap=1 1 1 .01     0 0 0 0.01;
+			Texture=sakexplo;
+			airdrag=0.97;
+			particleLife=7;
+			particleLifeSpread=8;
+			numParticles=16;
+			particleSpeed=3;
+			particleSpeedSpread=4;
+			particleSize=6;
+			particleSizeSpread=8;
+			emitRot=0;
+			emitRotSpread=40;
+			directional=1;
+		}
+		air=0;
+		ground=1;
+		count=1;
+	}
+
+
+	[rauchwasser1] {
+		class=CSimpleParticleSystem;
+		[properties]{
+			sizeGrowth=0;
+			sizeMod=1.0;
+			pos=0, 1, 0;
+			emitVector=0,1,0;
+			gravity=0, -0.2, 0;
+			colorMap=   1 1 1 1   0 0 0 0.01;
+			Texture=randdots;
+			airdrag=0.97;
+			particleLife=20;
+			particleLifeSpread=0;
+			numParticles=20;
+			particleSpeed=3;
+			particleSpeedSpread=4;
+			particleSize=20;
+			particleSizeSpread=10;
+			emitRot=90;
+			emitRotSpread=20;
+			directional=1;
+		}
+		water=1;
+		ground=0;
+		count=1;
+	}
+
+
+	[rauchwasser] {
+		class=CSimpleParticleSystem;
+		[properties]{
+			sizeGrowth=0;
+			sizeMod=1.0;
+			pos=0, 1, 0;
+			emitVector=0,1,0;
+			gravity=0, -0.2, 0;
+			colorMap=  .8 .8 1 1   0 0 0 0.01;
+			Texture=smokesmall;
+			airdrag=0.97;
+			particleLife=20;
+			particleLifeSpread=0;
+			numParticles=20;
+			particleSpeed=1;
+			particleSpeedSpread=4;
+			particleSize=10;
+			particleSizeSpread=0;
+			emitRot=90;
+			emitRotSpread=20;
+			directional=1;
+		}
+		water=1;
+		ground=0;
+		count=1;
+	}
+
+	[Yu]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=explo;
+			alwaysVisible=1;
+		  size=30;
+		  sizeGrowth=-.1;
+		  ttl=32;
+	          colorMap=.8 .2 0 1  0 0 0 .1;
+		}
+    	air=1;
+    	ground=1;
+    	water=0;
+	count=1;
+	}
+
+
+
+
+
+
+	[Yudk]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=explo;
+			alwaysVisible=1;
+		  size=40;
+		  sizeGrowth=-.1;
+		  ttl=32;
+	          colorMap=.4 .4 2 1	0 0 0 .1;
+		}
+    	air=0;
+    	ground=0;
+    	water=1;
+	count=1;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

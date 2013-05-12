@@ -1,0 +1,44 @@
+[raketenrauch8]
+{
+
+
+
+//orange zu schwarz..
+
+	[circle]
+	{
+		class=CSimpleParticleSystem;
+		[properties] {
+			sizegrowth=0;
+			sizemod=1;
+			pos=0, 3, 0;
+			emitVector=0,1,0;
+			gravity=0, .3, 0;
+			Texture=smokesmall;
+			colorMap=1 .35 0 1 	 .2 .2 .2 1	0 0 0 .01;
+			airdrag=.9;
+			particleLife=4;
+			particleLifeSpread=8;
+			numParticles=1;
+			particleSpeed=0;
+			particleSpeedSpread=0;
+			particleSize=8;
+			particleSizeSpread=5;
+			emitRot=0;
+			emitRotSpread=360;
+			directional=0;
+
+		}
+		air=1;
+		ground=1;
+		water=1;
+		count=1;
+	}
+
+
+
+
+
+
+
+}

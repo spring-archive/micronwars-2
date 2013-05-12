@@ -1,0 +1,18 @@
+[skmisslauncher1_dead]
+{
+	world=All Worlds;
+	description=missilelauncher Wreckage;
+	category=corpses;
+	object=skmisslauncher1wreck.S3O;
+	footprintx=2;
+	footprintz=2;
+	height=10;
+	blocking=1;
+	hitdensity=100;
+	metal=50;
+	damage=300;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=200;
+}

@@ -1,0 +1,76 @@
+//Copyright : Razorblade;
+
+[UNITINFO] {
+  unitname=sktransportship;
+  name=The Transporter;
+  description=Transportship;
+  acceleration=0.067;
+  bmcode=1;
+  brakeRate=0.09;
+  buildAngle=16384;
+  buildCostEnergy=26730;
+  buildCostMetal=2673;
+  builder=0;
+  buildTime=59100;
+  [CustomParams]
+	{
+		RequireTech= 3 outpost;
+		
+	}
+  canAttack=0;
+  canGuard=1;
+  canload=1;
+  canMove=1;
+  canPatrol=1;
+  canstop=1;
+  category=SHIP SKIMMERS;
+  corpse=;
+  defaultmissiontype=Standby;
+  
+  explodeAs=BIG_UNITEX;
+  firestandorders=1;
+  floater=1;
+  footprintX=5;
+  footprintZ=10;
+  iconType=sea;
+  idleAutoHeal=5;
+  idleTime=1800;
+  maneuverleashlength=640;
+  maxDamage=18000;
+  maxVelocity=3.34;
+  metalStorage=0;
+  minWaterDepth=12;
+  mobilestandorders=1;
+  movementClass=BOAT5;
+  noAutoFire=0;
+  noChaseCategory=ALL;
+  objectName=sktransportship.s3o;
+  scale=0.5;
+  seismicSignature=0;
+  selfDestructAs=BIG_UNIT;
+  side=SKIMMERS;
+  sightDistance=325;
+  smoothAnim=1;
+  soundcategory=ARM_SHIP;
+  standingfireorder=2;
+  standingmoveorder=1;
+  steeringmode=1;
+  TEDClass=SHIP;
+  //loadingRadius=120;
+	//releaseHeld=1;
+	transportmass=500000;
+	transportCapacity=25;
+  transportSize=5;
+    //transportUnloadMethod=2;
+    //turninplace=0;
+	unloadSpread=3;
+  turnRate=361;
+  badTargetCategory=VTOL;
+  workerTime=0;
+  wpri_badtargetcategory=VTOL;
+  collisionVolumeType = box;
+  	collisionVolumeOffsets = -1 18 36;
+ 	collisionVolumeScales = 47 60 269;
+  	collisionVolumeTest = 1;
+}
+

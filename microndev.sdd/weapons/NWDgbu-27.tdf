@@ -1,0 +1,42 @@
+[NWDgbu-27]
+{	
+	name=GBU-27 Paveway III guided bomb;
+	rendertype=1;
+	lineofsight=1;
+	dropped=1;
+	manualbombsettings=1;
+	burst=1;
+	turret=0;
+	togroundweapon=1;
+	toairweapon=0;
+	model=NWDgbu27.s3o;
+	propeller=1;
+
+	range=1000;
+	reloadtime=15;
+	weapontimer=4;
+	weaponvelocity=110;
+	startvelocity=10;
+	weaponacceleration=5;	
+
+	turnrate=100;
+	areaofeffect=128;
+	soundstart=;
+	soundhit=gbu-27explo;
+	guidance=1;
+	
+	selfprop=1;
+	burnblow=1;
+	smoketrail=1;
+startsmoke=1;
+	tracks=1;
+	tolerance=32767;
+
+	explosiongenerator=custom:MittleGrosseExplosion3;
+	[DAMAGE]
+		{
+		default=3000;
+		
+		
+		}
+	}

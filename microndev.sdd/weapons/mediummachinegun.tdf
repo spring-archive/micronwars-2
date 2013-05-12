@@ -1,0 +1,36 @@
+[mediummachinegun]
+	{
+	name=mediummachinegun;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+
+	beamweapon=1;
+	rgbcolor=1.0 0.5 0.0;
+	thickness=0.5;
+	intensity=0.2;
+
+	range=600;
+	reloadtime=0.1;
+	weapontimer=1;
+	weaponvelocity=3000;
+	startvelocity=3000;
+	weaponacceleration=51;
+	turnrate=12384;
+	areaofeffect=10;
+	burnblow=1;
+	noselfdamage=1;
+	soundstart=newmgun;
+	soundhit=gau8hit;
+	firestarter=78;
+	smokedelay=.51;
+	tolerance=1000;
+
+	explosiongenerator=custom:bullet_hit;
+    
+	[DAMAGE]
+		{
+		default=5.2;
+		
+		}
+	}

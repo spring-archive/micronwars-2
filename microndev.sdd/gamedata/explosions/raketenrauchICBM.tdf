@@ -1,0 +1,108 @@
+[raketenrauchICBM]
+{
+
+
+	[circle2]
+	{
+		class=CSimpleParticleSystem;
+		[properties] {
+			sizegrowth=-0.8;
+			sizemod=1;
+			pos=0, 3, 0;
+			emitVector=dir;
+			gravity=0, .3, 0;
+			Texture=smokesmall;
+			colorMap= 1 1 1 1  0.9 0.4 0.25 0.75	0 0 0 .01;
+			airdrag=.9;
+			particleLife=15;
+			particleLifeSpread=2;
+			numParticles=3;
+			particleSpeed=1;
+			particleSpeedSpread=3;
+			particleSize=1;
+			particleSizeSpread=2;
+			emitRot=0;
+			emitRotSpread=21;
+			directional=0;
+			alwaysVisible=1;
+		}
+		air=1;
+		ground=1;
+		water=1;
+		count=1;
+	}
+
+
+
+	[circle]
+	{
+		class=CSimpleParticleSystem;
+		[properties] {
+			sizegrowth=0.1;
+			sizemod=1;
+			pos=0, 3, 0;
+			emitVector=dir;
+			gravity=0, .3, 0;
+			Texture=smokesmall;
+			colorMap= .8 .8 .8 0.25	0 0 0 .01;
+			airdrag=.9;
+			particleLife=300;
+			particleLifeSpread=2;
+			numParticles=3;
+			particleSpeed=1;
+			particleSpeedSpread=3;
+			particleSize=1;
+			particleSizeSpread=2;
+			emitRot=0;
+			emitRotSpread=30;
+			directional=0;
+			alwaysVisible=1;
+		}
+		air=1;
+		ground=1;
+		water=1;
+		count=1;
+	}
+
+   [Funken]
+   {
+   class=CSimpleParticleSystem;
+
+      [properties]
+      {
+      alwaysVisible=1;
+      Texture=flare;
+      sizeGrowth=1.35;
+      sizeMod=1;
+
+         pos      = 0.0, 1, 0.0;
+            emitVector  = 0.0, 1, 0.0;
+      gravity     = 0.0, 1, 0.0;
+
+      colorMap = 0.8 0.8 0.8 0.01   0 0 0 0.008;
+      airdrag     = 0.40;
+
+      particleLife=3;
+      particleLifeSpread=0;
+
+      numParticles=1;
+
+      particleSpeed=0;
+      particleSpeedSpread=2;
+      particleSize=100;
+      particleSizeSpread=40;
+
+      emitRot=90;
+      emitRotSpread=0;
+
+      directional=0;
+      useAirLos=1;
+      }
+   ground=1;
+   air=1;
+   count=1;
+   }
+
+
+
+}

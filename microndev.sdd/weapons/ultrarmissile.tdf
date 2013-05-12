@@ -1,0 +1,48 @@
+[ultrarmissile]
+	{
+	
+	name=pod missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+     	
+	model=ultramissile.s3o;
+
+	
+        range=700;
+	reloadtime=0.2;
+	weaponvelocity=800;
+	startvelocity=300;
+	weaponacceleration=200;
+	turnrate=1000;
+	areaofeffect=120;
+	
+    	tolerance=1000;
+	wobble=2000;
+    	
+	soundstart=ultratank/rockfire01;
+	soundhit=xplosml2;
+	trajectoryheight=0.3;
+	
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=0;
+	tracks=0;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:groshitzeexplosion2;
+
+
+	[DAMAGE]
+		{
+		default=200;
+		
+		
+} 
+	}
+
+

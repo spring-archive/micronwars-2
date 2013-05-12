@@ -1,0 +1,50 @@
+// Copyrighted : Razorblade;
+[UNITINFO]
+	{
+	UnitName=nwdbarrack;
+	Version=1;
+	Side=Skimmers;
+	Objectname=nwdbarracks.s3o;
+	Designation=CE-GPP;
+	Name=infantry barrack;
+	Description=Builds infantry;
+	
+	FootprintX=4;
+	FootprintZ=4;
+	BuildCostEnergy=900;
+	BuildCostMetal=300;
+	MaxDamage=2400;
+	MaxWaterDepth=0;
+	MaxSlope=35;
+	EnergyUse=0;
+	BuildTime=4000;
+	WorkerTime=50;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=600;
+	
+	SoundCategory=airfacsk;
+	ExplodeAs=BIG_UNITEX;
+	SelfDestructAs=ESTOR_BUILDINGEX;
+	Category=SKIMMERS FACTORY NOWEAPON NOTAIR NOTSUB ;
+	TEDClass=PLANT;
+	Corpse=;
+	CanRepeat=1;
+	YardMap=oooo occo occo occo ;
+	icontype=bigbuilding;
+	UnitNumber=7733;
+ActivateWhenBuilt=1;
+	Ovradjust=1;
+	shownanospray=false;
+	
+	autoheal=0;
+	canbeassisted=0;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 10 -1;
+ 	 collisionVolumeScales = 62 23 58;
+  	collisionVolumeTest = 1;
+	}
+

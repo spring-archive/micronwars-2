@@ -1,0 +1,49 @@
+[nwdstinger]
+	{
+	
+	name=stinger missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=0;
+     	
+	model=nwdtowmissile.s3o;
+
+	
+        range=750;
+	reloadtime=5;
+	weaponvelocity=1000;
+	startvelocity=300;
+	weaponacceleration=600;
+	turnrate=1000;
+	areaofeffect=120;
+	
+    	tolerance=1000;
+	wobble=1100;
+    	
+	soundstart=nwdtowmissilefire;
+	soundhit=nwdtowmissileexplo;
+	trajectoryheight=0.4;
+	
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch;
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=200;
+		
+		
+		
+} 
+	}
+
+

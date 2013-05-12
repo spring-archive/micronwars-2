@@ -1,0 +1,62 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=nwd152mmdana;
+	Version=1;
+	Side=NWD;
+	Objectname=NWD152mmdana.s3o;
+	Designation=NWD;
+	Name=ShKH Dana;
+	Description=Self propelled Artillery;
+	[CustomParams]
+	{
+		RequireTech= 4 outpost;
+		
+	}
+	FootprintX=3;
+	FootprintZ=3;
+	BuildCostEnergy=8100;
+	BuildCostMetal=800;
+	MaxDamage=2400;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	BuildTime=19600;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=1000;
+	SoundCategory=scout;
+	Category=NWD TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	Corpse=;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	mass=8000;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	MaxVelocity=1.3;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=400;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK3;
+	Upright=0;
+	autoheal=0;
+	weapon1=NWD152mm_cannon;
+	onlytargetcategory1=NOTAIR;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 5 2;
+ 	 collisionVolumeScales = 19 21 56;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+
+}

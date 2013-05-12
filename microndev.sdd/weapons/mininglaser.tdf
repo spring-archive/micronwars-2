@@ -1,0 +1,39 @@
+[mininglaser]
+{
+	name=Laser;
+	rendertype=0;
+	lineofsight=1;
+	turret=1;
+	range=100;
+	reloadtime=0.01;
+	weaponvelocity=800;
+	areaofeffect=8;
+	impactonly=1;
+	
+	duration=0.02;
+	
+	energypershot=0.4;
+	soundstart=lasrfir1;
+	
+	firestarter=50;
+	beamlaser=1;
+	thickness=0.75;
+	corethickness=0.3;
+	laserflaresize=1;
+	targetmoveerror=0.2;
+	beamtime=0.1;
+	rgbcolor=1 1 0.4;
+	tolerance=10000;
+	collidefriendly=0;
+	avoidfriendly=0;
+	impulsefactor=0.123;
+	impulseboost=0.123;
+	cratermult=0;
+	craterboost=0;
+	noselfdamage=1;
+	[DAMAGE]
+	{
+		default=3.0;
+		
+	}
+}

@@ -1,0 +1,54 @@
+[cruisemissile]
+	{
+	name=cruisemissile;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=cruisemissile.s3o;
+
+	range=70000;
+	reloadtime=250;
+	
+	noautorange=1;
+	weapontimer=10;
+	flighttime=700;
+	startvelocity=10;
+	weaponvelocity=800;
+	weaponacceleration=50;
+	turnrate=2500;
+	areaofeffect=256;
+	
+
+	
+	stockpile=1;
+	commandfire=1;
+	cruise=1;
+	targetable=2;
+	tracks=1;
+	soundstart=tomahawklaunch;
+	soundhit=;
+
+	firestarter=100;
+	smokedelay=0.02;
+	selfprop=1;
+	cegtag=raketenrauch;
+	explosiongenerator=custom:groshitzeexplosion2;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	
+
+	
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=3000;
+		
+		
+		}
+	}
+

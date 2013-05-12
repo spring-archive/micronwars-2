@@ -1,0 +1,40 @@
+[rapidflak]
+{
+	name=FlakCannon;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+	beamweapon=1;
+	rgbcolor=1.0 0.5 0.0;
+	thickness=0.5;
+	intensity=0.8;
+	toairweapon=1;
+	canattackground=0;
+	unitsonly=1;
+	range=1200;
+	reloadtime=0.1;
+	weapontimer=1;
+	weaponvelocity=1500;
+	areaofeffect=128;
+	edgeeffectiveness=0.85;
+	soundstart=rapidflakfire;
+	soundhit=rapidflakexpl;
+	minbarrelangle=-24;
+	accuracy=500;
+	burnblow=1;
+	explosiongenerator=custom:MittleGrosseExplosion2;
+	startsmoke=1;
+	impulsefactor=0;
+	impulseboost=0;
+	cratermult=0;
+	craterboost=0;
+	noselfdamage=1;
+	soundstartvolume=7;
+	soundhitvolume=9;
+
+	[DAMAGE]
+	{
+		default=19;
+		
+	}
+}

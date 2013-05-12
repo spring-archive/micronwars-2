@@ -1,0 +1,63 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=NWDm163aa;
+	Side=Skimmers;
+	Objectname=NWDm163aa.s3o;
+	Name=M163 SP Vulcan;
+	Description=HEAVY AA tank;
+	[CustomParams]
+	{
+		RequireTech= 2 outpost;
+		
+	}
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=3300;
+	BuildCostMetal=330;
+	MaxDamage=1400;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	BuildTime=7300;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	mass=13000;
+	SightDistance=800;
+	airsightdistance=1200;
+	SoundCategory=Ltank;
+	Category=NWD TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	Corpse=nwdm163aa_dead;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	canattack=1;
+	MaxVelocity=2.0;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=300;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK2;
+	Upright=0;
+	autoheal=0;
+	weapon1=NWDPDvulcan;
+	OnlyTargetCategory1=VTOL;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 6 -2;
+ 	 collisionVolumeScales = 19 15 29;
+  	collisionVolumeTest = 1;
+	Armortype=HEAVY;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

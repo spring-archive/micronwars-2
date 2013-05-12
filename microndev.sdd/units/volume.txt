@@ -1,0 +1,4 @@
+collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 -52 15;
+ 	 collisionVolumeScales = 46 110 120;
+  	collisionVolumeTest = 1;

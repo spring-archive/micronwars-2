@@ -1,0 +1,33 @@
+[NWDL60boforscannon]
+	{
+	name=40MM bofors cannon;
+	rendertype=4;
+	lineofsight=1;
+	turret=1;
+	
+	beamweapon=1;
+	rgbcolor=1.0 0.5 0.0;
+	thickness=0.5;
+	intensity=1.0;
+        range=900;
+	reloadtime=1;
+	startvelocity=1000;
+	weaponvelocity=1000;
+	areaofeffect=32;
+	accuracy=1000;
+	tolerance=1000;
+	
+	soundstart=nwdl60boforsfire;
+	soundhit=nwdbradleygunexplo;
+	
+   
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=800;
+		
+	
+    }
+	}

@@ -1,0 +1,73 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=NWDApache;
+	Side=NWD;
+	Objectname=NWDApache.s3o;
+	Name=AH-64D Apache;
+	Description=Assault helicopter;
+	[CustomParams]
+	{
+		RequireTech= 4 outpost;
+		
+	}
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=16500;
+	BuildCostMetal=1625;
+	MaxDamage=1600;
+	BuildTime=36500;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+    SightDistance=800;
+	airsightdistance=800;
+	SoundCategory=Plane;
+	ExplodeAs=SMALL_UNIT;
+	SelfDestructAs=SMALL_UNIT;
+	Category=SKIMMERS VTOL HELICOPTER;
+	TEDClass=VTOL;
+	Corpse=;
+	firestandorders=1;
+	StandingFireOrder=0;
+	mobilestandorders=1;
+	StandingMoveOrder=1;
+	collide=0;
+	airstrafe=0;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	MaxVelocity=5;
+	BrakeRate=2;
+	Acceleration=0.15;
+	TurnRate=320;  
+	SteeringMode=1;
+	ShootMe=1;
+	Canfly=1;
+	cruisealt=100; 
+	BankScale=0.2;
+	DefaultMissionType=VTOL_standby;
+	maneuverleashlength=2280;
+	Weapon1=20mmgun;
+	OnlyTargetCategory1=NOTAIR HELICOPTER;
+	Weapon2=hellfire;
+	OnlyTargetCategory2=NOTAIR;
+	WeaponMainDir2= 0 0 1;
+	MaxAngleDif2=20;
+	Weapon3=rocketpod;
+	OnlyTargetCategory3=NOTAIR;
+	WeaponMainDir3= 0 0 1;
+	MaxAngleDif3=20;
+	canattack=1;
+	autoheal=0;
+	attackrunlength=950;
+	hoverattack=1;
+	
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 2 -5;
+ 	 collisionVolumeScales = 8 10 46;
+  	collisionVolumeTest = 1;
+}

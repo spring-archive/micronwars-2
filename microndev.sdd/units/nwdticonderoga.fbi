@@ -1,0 +1,86 @@
+[UNITINFO]
+	{
+	name=CG-47 Ticonderoga;
+	unitname=nwdticonderoga;
+	buildcostenergy=77220;
+	buildcostmetal=7722;
+	buildtime=170820;
+	//script=ticonderoga.lua;
+	description=Missile cruiser;
+	
+[CustomParams]
+	{
+		RequireTech=7 outpost;
+	}
+	footprintx=3;
+	footprintz=10;
+	maxdamage=25000;
+	objectname=nwdticonderoga.s3o;
+	side=NWD;
+	soundcategory=ship;
+	tedclass=SHIP;
+	brakerate=0.031;
+	movementclass=DBOAT6;
+	acceleration=0.036;
+	canmove=1;
+	maxvelocity=1.88;
+	turnrate=100;
+	canattack=1;
+	canstop=1;
+	floater=1;
+	idletime=1800;
+	idleautoheal=5;
+	candgun=1;
+	radardistance=3000;
+	sightdistance=2000;
+	weapon1=nwd105mm;
+	weapon2=ssm2-missile;
+	weapon3=nwd105mm;
+	weapon4=goalkeeper3;
+	weapon5=goalkeeper3;
+	weapon6=cruisemissile;
+	weapon7=harpoon;
+	WeaponMainDir7=1 0 0;  
+	MaxAngleDif7=25; 
+	weapon8=harpoon;
+	WeaponMainDir8=-1 0 0;  
+	MaxAngleDif8=25; 
+	weapon9=ohiotorp;
+	OnlyTargetCategory1=NOTAIR;
+	OnlyTargetCategory2=VTOL;
+	OnlyTargetCategory3=NOTAIR;
+	OnlyTargetCategory6=NOTAIR;
+	OnlyTargetCategory7=SHIP;
+	OnlyTargetCategory8=SHIP;
+	OnlyTargetCategory9=SHIP SUB;
+	explodeas=BIG_UNITEX;
+	selfdestructas=BIG_UNIT;
+	category=SKIMMERS SHIP NOTAIR ;
+	onlytargetcategory5=NOTAIR;
+	minwaterdepth=15;
+	corpse=;
+	smoothanim=1;
+	icontype=sea;
+	bmcode=1;
+	noautofire=0;
+	buildangle=16384;
+	seismicsignature=0;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=Standby;
+	canpatrol=1;
+	mobilestandorders=1;
+	standingmoveorder=1;
+	canguard=1;
+	steeringmode=1;
+	maneuverleashlength=2500;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 -7 9;
+ 	collisionVolumeScales = 21 35 203;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

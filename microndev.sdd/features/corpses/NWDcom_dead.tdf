@@ -1,0 +1,18 @@
+[NWDcom_dead]
+{
+	world=All Worlds;
+	description=Combuilding Wreckage;
+	category=corpses;
+	object=NWDcom_dead.S3O;
+	footprintx=8;
+	footprintz=8;
+	height=35;
+	blocking=1;
+	hitdensity=100;
+	metal=20000;
+	damage=500;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=35000;
+}

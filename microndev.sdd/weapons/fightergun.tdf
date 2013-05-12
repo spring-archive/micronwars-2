@@ -1,0 +1,37 @@
+[Fightergun]
+	{
+	name=fighter machinegun;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+	togroundweapon=1;
+
+	beamweapon=1;
+	rgbcolor=1.0 0.5 0.0;
+	thickness=0.5;
+	intensity=0.2;
+
+	range=600;
+	reloadtime=0.1;
+	weapontimer=1;
+	weaponvelocity=999;
+	startvelocity=800;
+	weaponacceleration=51;
+	areaofeffect=10;
+	soundstart=lightminigunfire1;
+	soundhit=gau8hit;
+	firestarter=78;
+	smokedelay=.51;
+	tolerance=1000;
+	noselfdamage=1;
+	friendlyfire=0;
+	collidefriendly=0;
+
+	explosiongenerator=custom:bullet_hit;
+    
+	[DAMAGE]
+		{
+		default=18;
+		
+		}
+	}

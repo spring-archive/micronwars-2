@@ -1,0 +1,72 @@
+[UNITINFO]
+	{
+	name=Airwatch;
+	unitname=skmfrigate;
+	buildcostenergy=10365;
+	buildcostmetal=2590;
+	buildtime=29365;
+	
+	description= Anti air Frigate;
+[CustomParams]
+	{
+		RequireTech=6 outpost;
+	}
+	footprintx=2;
+	footprintz=6;
+	maxdamage=7905;
+	objectname=skmfrigate.s3o;
+	side=SKIMMERS;
+	soundcategory=ship;
+	tedclass=SHIP;
+	brakerate=0.031;
+	movementclass=DBOAT6;
+	acceleration=0.036;
+	canmove=1;
+	maxvelocity=2.88;
+	turnrate=600;
+	builder=0;
+	workertime=0;
+	radardistance=2000;
+	canstop=1;
+	floater=1;
+	sightdistance=1000;
+	weapon1=mfrigateaamissile;
+	OnlyTargetCategory1=VTOL;
+	weapon2=antishipmissile;
+	OnlyTargetCategory2=SHIP;
+	ActivateWhenBuilt=1;
+	
+	
+	category=SKIMMERS SHIP NOTAIR ;
+	
+	explodeas=BIG_UNITEX;
+	selfdestructas=BIG_UNIT;
+	
+	
+	canattack=1;
+	minwaterdepth=1;
+	corpse=;
+	smoothanim=1;
+	icontype=sea;
+	bmcode=1;
+	noautofire=0;
+	buildangle=16384;
+	seismicsignature=0;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=Standby;
+	canpatrol=1;
+	mobilestandorders=1;
+	standingmoveorder=1;
+	canguard=1;
+	steeringmode=1;
+	maneuverleashlength=640;
+	
+	
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 2 5 3;
+ 	collisionVolumeScales = 21 25 110;
+  	collisionVolumeTest = 1;
+	
+	
+}

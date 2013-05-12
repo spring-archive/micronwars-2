@@ -1,0 +1,73 @@
+//
+// Generated with TAS Modit v2.2 Beta
+//
+
+[TYPE1]
+{
+	select1=click;
+	ok1=attack;
+	underattack=warning1;
+	count5=count1;
+	count4=count2;
+	count3=count3;
+	count2=count4;
+	count1=count5;
+	count0=count6;
+	canceldestruct=cancel2;
+}
+
+[machinegun]
+{
+	select=mselect1;
+	ok1=Mok1;
+	underattack=munderatt;
+	canceldestruct=cancel2;
+}
+
+[Ltank]
+{
+	select=lighttank/select1;
+	ok1=lighttank/ok1;
+	ok2=lighttank/ok2;
+	ok3=lighttank/ok3;
+	ok4=lighttank/ok4;
+	underattack=lighttank/Uattack;
+}
+
+[commandsk]
+{
+	count5=count1;
+	count4=count2;
+}
+
+[bunker]
+{
+	
+	ok1=bunker/alarm;
+}
+
+[skultratank]
+{
+	select1=ultratank/select01;
+	select2=ultratank/select02;
+	ok1=ultratank/ok1;
+	attack1=ultratank/ok2;
+	attack2=ultratank/ok3;
+	underattack=ultratank/underattack01;
+}
+
+[commandbuilding]
+{
+	select1=commandb/select1;
+}	
+
+[Heavytank]
+{
+	select1=Heavytank/OK;
+	select2=Heavytank/whatisit;
+	select3=Heavytank/yes;
+	ok1=Heavytank/ok;
+	ok2=Heavytank/targetting;
+	ok3=Heavytank/going;
+	underattack=Heavytank/getting hit;
+}

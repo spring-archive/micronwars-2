@@ -1,0 +1,52 @@
+[outpostbattery]
+	{
+	
+	name=battery missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+   
+	model=outpostrocket.s3o;
+
+	
+	flighttime=7;
+        range=1200;
+	reloadtime=1.8;
+	weaponvelocity=500;
+	startvelocity=300;
+	weaponacceleration=40;
+	turnrate=3000;
+	areaofeffect=120;
+	sprayangle=1024;
+	burnblow=1;
+    	
+	energypershot=0.5;
+    	trajectoryheight=2.5;
+	ProximityPriority=-1.5;
+	soundstart=barragerfire;
+	soundhit=xplosml2;
+	selfprop=1;
+	wobble=7000;
+	
+	firestarter=80;
+	smokedelay=0.02;
+	guidance=1;
+	tracks=0;
+	selfprop=1;
+	smoketrail=1;
+	tolerance=1000;
+	cruisealt=120;
+	startsmoke=1;
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:groshitzeexplosion2;
+
+
+	[DAMAGE]
+		{
+		default=80;
+		
+		
+} 
+	}
+
+

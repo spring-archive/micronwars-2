@@ -1,0 +1,51 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=hawkmissiledes;
+	Version=1;
+	Side=Skimmers;
+	Objectname=hawkmissiledes.s3o;
+	Designation=CE-GPP;
+	Name=Hawk missilebattery;
+	Description=anti air missile;
+	FootprintX=4;
+	FootprintZ=4;
+	BuildCostEnergy=4000;
+	BuildCostMetal=1000;
+	MaxDamage=1800;
+	MaxWaterDepth=0;
+	MaxSlope=10;
+	EnergyUse=0;
+	BuildTime=10000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=1000;
+	SoundCategory=;
+	ExplodeAs=;
+	SelfDestructAs=;
+	Category=NWD radar NOTAIR NOTSUB ;
+	TEDClass=fort;
+	Corpse=hawkmissile_dead;
+	icontype=bigbuilding;
+	UnitNumber=7733;
+	buildangle=4096;
+	ActivateWhenBuilt=1;
+	Ovradjust=1;
+	autoheal=0;
+	repaircost=10;
+	ArmorType=ULTRA;
+	canbeassisted=0;
+	unitrestricted=4;
+	capturable=1;
+	canattack=1;
+	weapon1=hawksitemissile;
+	Onlytargetcategory1=VTOL;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 5 -3;
+ 	 collisionVolumeScales = 19 21 41;
+  	collisionVolumeTest = 1;
+	}
+

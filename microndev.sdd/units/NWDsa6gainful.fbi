@@ -1,0 +1,68 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=NWDsa6gainful;
+	Version=1;
+	Side=NWD;
+	Objectname=NWDsa6gainful.s3o;
+	Designation=NWD;
+	Name=SA-6 Gainful;
+	Description=Long range Anti air missile;
+	[CustomParams]
+	{
+		RequireTech=4 outpost;
+		
+	}
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=6600;
+	BuildCostMetal=660;
+	MaxDamage=1500;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	BuildTime=14600;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=650;
+	airsightdistance=2200;
+	SoundCategory=Ltank;
+	Category=NWD TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	Corpse=;
+	UnitNumber=5;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	mass=25100;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	canattack=1;
+	MaxVelocity=1.6;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=300;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK2;
+	Upright=0;
+	autoheal=0;
+	HideDamage=0;
+	ImmuneToParalyzer=0;
+	weapon1=nwdsa6missile;
+	Nochasecategory=NOTAIR OUTPOST MINERALS;
+	BadTargetCategory=MINERALS;
+	OnlyTargetCategory1=VTOL;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = -0 3 0;
+ 	 collisionVolumeScales = 15 14 29;
+  	collisionVolumeTest = 1;
+	Armortype=MEDIUM;
+	
+	
+	
+}

@@ -1,0 +1,21 @@
+[crystal]
+	{
+	world=allworld;
+	description=greencrystal;
+	category=crystal;
+	object=crystal.s3o;
+	footprintx=2;
+	footprintz=2;
+	height=10;
+	blocking=1;
+	hitdensity=40;
+	metal=40000;
+	damage=500;//4000
+	Mass=4900;
+	reclaimable=1;
+	autoreclaimable=0;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}
+
+

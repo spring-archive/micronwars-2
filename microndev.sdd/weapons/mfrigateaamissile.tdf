@@ -1,0 +1,46 @@
+[mfrigateaamissile]
+	{
+	
+	name=Anti Air Missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+     	toairweapon=1;
+	model=ultramissile.s3o;
+
+	weapontimer=5;
+        range=1200;
+	reloadtime=1.0;
+	weaponvelocity=800;
+	startvelocity=800;
+	weaponacceleration=40;
+	turnrate=10000;
+	areaofeffect=125;
+	
+    	tolerance=8000;
+	soundstart=barragerfire;
+	soundhit=xplosml2;
+	pitchtolerance=5000;
+	
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch;
+	explosiongenerator=custom:groshitzeexplosion2;
+
+
+	[DAMAGE]
+		{
+		default=200;
+		
+		
+} 
+	}
+
+

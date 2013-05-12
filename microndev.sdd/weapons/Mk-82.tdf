@@ -1,0 +1,25 @@
+[Mk-82]
+{
+	name=Mk-82;
+	rendertype=6;
+	dropped=1;
+	model=Mk-82.s3o;
+	
+	toairweapon=0;
+	range=1000;
+        reloadtime=5;
+	areaofeffect=200;
+	
+	collideFriendly=0;
+	soundstart=bombdropxx;
+	soundhit=bombEXPLOBIG;
+	explosiongenerator=custom:crabexplo;
+	noselfdamage=1;
+	friendlyfire=0;
+	
+	[DAMAGE]
+		{
+		default=1100;
+		
+		}
+	}

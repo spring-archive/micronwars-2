@@ -1,0 +1,50 @@
+// Copyrighted : Razorblade;
+[UNITINFO]
+	{
+	UnitName=nwdspycenter;
+	Version=1;
+	Side=Skimmers;
+	Objectname=nwdspycenter.s3o;
+	Designation=CE-GPP;
+	Name=spy radar;
+	Description= (expensive)reveals large portion of the map and builds special units;
+	
+	FootprintX=7;
+	FootprintZ=7;
+	BuildCostEnergy=21600;
+	BuildCostMetal=7200;
+	MaxDamage=12000;
+	MaxWaterDepth=0;
+	MaxSlope=35;
+	EnergyUse=0;
+	BuildTime=72000;
+	WorkerTime=100;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=2500;
+	RadarDistance=2500;
+	SoundCategory=airfacsk;
+	ExplodeAs=BIG_UNITEX;
+	SelfDestructAs=ESTOR_BUILDINGEX;
+	Category=SKIMMERS FACTORY NOWEAPON NOTAIR NOTSUB ;
+	TEDClass=PLANT;
+	Corpse=;
+	CanRepeat=1;
+	YardMap= ooooooo ooooooo occcooo occcooo occcooo occcooo occcooo;
+	icontype=bigbuilding;
+	UnitNumber=7733;
+ActivateWhenBuilt=1;
+	Ovradjust=1;
+	shownanospray=false;
+	
+	autoheal=0;
+	canbeassisted=0;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 7 -19 15;
+ 	 collisionVolumeScales = 70 54 87;
+  	collisionVolumeTest = 1;
+	}
+

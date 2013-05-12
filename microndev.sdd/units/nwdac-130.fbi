@@ -1,0 +1,81 @@
+// Copyrighted : Razorblade;
+[UNITINFO]
+	{
+	UnitName=nwdac-130;
+	Side=NWD;
+	Objectname=nwdac-130.s3o;
+	Name=AC-130;
+	Description=Heavy gunship;
+	[CustomParams]
+	{
+		RequireTech=7 outpost;
+		
+	}
+	FootprintX=3;
+	FootprintZ=3;
+	BuildCostEnergy=39600;
+	BuildCostMetal=3960;
+	MaxDamage=5000;
+	BuildTime=87600;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+     SightDistance=1200;
+	SoundCategory=fighter;
+	ExplodeAs=SMALL_UNIT;
+	SelfDestructAs=SMALL_UNIT;
+	Category=NWD VTOL BOMBER;
+	TEDClass=VTOL;
+	collide=0;
+	firestandorders=1;
+	StandingFireOrder=0;
+	mobilestandorders=1;
+	StandingMoveOrder=1;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	MaxVelocity=6;
+	autoheal=0;
+	BrakeRate=4;
+	Acceleration=0.15;
+	TurnRate=50;  
+	SteeringMode=1;
+	ShootMe=1;
+	Canfly=1;
+	cruisealt=300; 
+	BankScale=1;
+	maxbank=0.5;
+	DefaultMissionType=VTOL_standby;
+	maneuverleashlength=2000;
+	Weapon1=GAU-8a;
+	WeaponMainDir1=-1 -1 0;
+	MaxAngleDif1=80;
+	Weapon2=GAU-8a;
+	WeaponMainDir2=-1 -1 0;
+	MaxAngleDif2=80;
+	Weapon3=nwdl60boforscannon;
+	WeaponMainDir3=-1 -1 0;
+	MaxAngleDif3=80;
+	Weapon4=nwdac105mm;
+	WeaponMainDir4=-1 -1 0;
+	MaxAngleDif4=60;
+	weaponslaveto4=3;
+	weaponslaveto4=2;
+	weaponslaveto4=1;
+	OnlyTargetCategory1=NOTAIR;
+	canattack=1;
+    attackrunlength=1000;
+	CanDropFlare=1;
+	FlareReload=10;
+	FlareEfficieny=0.2;
+	FlareSalvoSize=22;
+	FlareSalvoDelay=0.4;
+	FlareDropVector=0 -1 -1;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 1 8 -8;
+ 	collisionVolumeScales = 36 22 83;
+  	collisionVolumeTest = 1;
+	
+}

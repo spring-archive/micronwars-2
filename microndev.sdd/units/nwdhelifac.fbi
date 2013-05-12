@@ -1,0 +1,50 @@
+// Copyrighted : Razorblade;
+[UNITINFO]
+	{
+	UnitName=nwdhelifac;
+	Version=1;
+	Side=Skimmers;
+	Objectname=nwdhelifac.s3o;
+	Designation=CE-GPP;
+	Name=helicopter Factory;
+	Description=Builds helicopters;
+	
+	FootprintX=8;
+	FootprintZ=8;
+	BuildCostEnergy=5400;
+	BuildCostMetal=1800;
+	MaxDamage=6000;
+	MaxWaterDepth=0;
+	MaxSlope=35;
+	EnergyUse=0;
+	BuildTime=18000;
+	WorkerTime=280;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=450;
+	RadarDistance=800;
+	SoundCategory=airfacsk;
+	ExplodeAs=BIG_UNITEX;
+	SelfDestructAs=ESTOR_BUILDINGEX;
+	Category=SKIMMERS FACTORY NOWEAPON NOTAIR NOTSUB ;
+	TEDClass=PLANT;
+	Corpse=;
+	CanRepeat=1;
+	YardMap=oooooooo oooooooo oooooooo oooooooo oooooooo oooooooo oooooooo oooooooo;
+	icontype=bigbuilding;
+	UnitNumber=7733;
+ActivateWhenBuilt=1;
+	Ovradjust=1;
+	shownanospray=false;
+	
+	autoheal=0;
+	canbeassisted=0;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = -4 10 0;
+ 	 collisionVolumeScales = 90 23 68;
+  	collisionVolumeTest = 1;
+	}
+

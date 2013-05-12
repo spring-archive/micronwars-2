@@ -1,0 +1,61 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO] // Generated with TAS Modit v2.2 Beta
+{
+	name=guided missile launcher;
+	unitname=skmisslauncher1des;
+	buildcostenergy=562;
+	buildcostmetal=100;
+	buildtime=1500;
+	category=SKIMMERS WEAPON NOTAIR;
+	description=launches guided missiles at ground and air targets;
+	[CustomParams]
+	{
+		RequireTech=2 outpost;
+		
+	}
+	footprintx=2;
+	footprintz=2;
+	maxdamage=500;
+	objectname=skmisslauncher1des.s3o;
+	side=Skimmers;
+	soundcategory=Missilelauncherl1;
+	tedclass=FORT;
+	brakerate=0;
+	acceleration=0;
+	maxvelocity=0;
+	maxslope=14;
+	turnrate=0;
+	yardmap=oooo;
+	builder=0;
+	workertime=0;
+	
+	energyuse=7;
+	metalstorage=0;
+	canattack=1;
+	canstop=1;
+	autoheal=0;
+	sightdistance=650;
+	weapon1=skmiss001;
+	
+	explodeas=MEDIUM_BUILDINGEX;
+	selfdestructas=MEDIUM_BUILDING;
+	nochasecategory=NEUTRAL MINERALS;
+	BadTargetCategory=outpost;
+	maxwaterdepth=0;
+	corpse=;
+	smoothanim=1;
+	icontype=building;
+	bmcode=0;
+	noautofire=0;
+	buildangle=32768;
+	seismicsignature=0;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=GUARD_NOMOVE;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 -6 -2;
+ 	 collisionVolumeScales = 8 15 17;
+  	collisionVolumeTest = 1;
+        
+}

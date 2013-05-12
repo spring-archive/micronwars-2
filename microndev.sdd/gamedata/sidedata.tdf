@@ -1,0 +1,161 @@
+[SIDE0]
+{
+	name=Forest Camo;
+	commander=NWDcom;
+}
+
+//[SIDE1]
+//{
+//	name=Desert Camo;
+//	commander=NWDcomdes;
+//}
+
+[CANBUILD]
+{
+	[nwdcom]
+	{
+	canbuild1=nwdmex;
+	canbuild2=sklvl1powplant;
+	canbuild3=skrefinery;
+	canbuild4=nwdbarrack;
+	canbuild5=sktankfac;
+	canbuild6=skairfac;
+	canbuild7=nwdhelifac;
+	canbuild8=skshipyard;
+	canbuild9=hawkradar;
+	canbuild10=ciwsturret;
+	canbuild11=skmisslauncher1;
+	canbuild12=skmachinegun;
+	canbuild13=skmediumcannon;
+}
+
+	[nwdbarrack]
+{
+	canbuild1=nwdassault;
+	canbuild2=nwdshotgunner;
+	canbuild3=nwdhgunner;
+	canbuild4=nwdsniper;
+	
+	}
+
+	[hawkradar]
+{
+	canbuild1=hawkmissile;
+	canbuild2=nwdsa2guidelinesite;
+	canbuild3=nwdantishipturret;
+}
+
+	[nwdcontruck]
+{
+	canbuild1=nwdmex;
+	canbuild2=sklvl1powplant;
+	canbuild3=skshipyard;
+	canbuild4=skrefinery;
+	canbuild5=nwdbarrack;
+	canbuild6=sktankfac;
+	canbuild7=skairfac;
+	canbuild8=nwdhelifac;
+	canbuild9=skmachinegun;
+	canbuild10=skmisslauncher1;
+	canbuild11=skmediumcannon;
+	canbuild12=nwdgeothermal;
+	canbuild13=nwdspycenter;
+	//canbuild8=skflakturret;	
+	
+	
+}
+
+	[nwdspycenter]
+	{
+	canbuild1=nwdparalyzer;
+	}
+
+	[sktankfac]
+{
+	canbuild1=nwdcontruck;
+	canbuild2=skminer;
+	canbuild3=nwdhumvee;
+	canbuild4=nwdhumvee2;
+	canbuild5=nwd152mmdana;
+	canbuild6=nwdbradley;
+	canbuild7=nwdm1abrams;
+	canbuild8=nwdchallengerII;
+	canbuild9=nwdsa6gainful;
+	canbuild10=skbarrager;
+	canbuild11=nwdm163aa;
+	
+}
+
+	[skairfac]
+{
+	canbuild1=sklvl1fighterfor;
+	
+	canbuild3=nwdf117;
+	canbuild4=nwda10;
+	canbuild5=nwdf-22;
+	canbuild6=nwdb-52;
+	canbuild7=nwdac-130;
+	canbuild8=nwdc17globemaster;
+}
+	[nwdhelifac]
+{
+	canbuild1=nwddef500;
+	canbuild2=nwdah1cobra;
+	canbuild3=nwdapache;
+	canbuild5=nwdchinook;
+}
+	[skshipyard]
+{
+	canbuild2=nwdsubmarine;
+	canbuild3=nwdiowa;
+	canbuild4=skacarrier;
+	canbuild5=nwdticonderoga;
+	canbuild6=nwdvirginia;
+	canbuild7=nwdohio;
+}
+
+
+	
+
+
+///////////////////////////////////////////////////////deserters///////////////////////////////////////////////
+
+
+	[nwdcomdes]
+{
+	canbuild1=sklvl1powplantdes;
+	canbuild2=skrefinerydes;
+	canbuild3=sktankfacdes;
+	canbuild5=skairfacdes;
+	canbuild8=hawkradardes;
+	canbuild9=ciwsturret;
+}
+
+	[hawkradardes]
+{
+	canbuild1=hawkmissiledes;
+}
+
+	[sktankfacdes]
+{
+	canbuild2=skminerdes;
+	canbuild3=nwdhumveedes;
+	canbuild4=nwdhumvee2des;
+	canbuild5=nwd152mmdanades;
+	canbuild6=nwdbradley;
+	canbuild7=nwdm1abramsdes;
+	canbuild9=skbarragerdes;
+	
+}
+
+	[skairfacdes]
+{
+	canbuild1=sklvl1fighter;
+}
+
+//skmisslauncher1des
+//skminerdes
+///////////////////////////////////////////////////Map Spawned Factory's///////////////////////////////////////
+
+
+}

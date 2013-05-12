@@ -1,0 +1,73 @@
+// Copyrighted :Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=skminer;
+	Version=1;
+	Side=Skimmers;
+	Objectname=skminer.s3o;
+	Designation=Skimmers;
+	Name=resource collector;
+	Description=drills recourses;
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=2500;
+	BuildCostMetal=250;
+	MaxDamage=500;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	EnergyUse=25;
+	BuildTime=6500;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=500;
+	SoundCategory=CORE_COM;
+	ExplodeAs=nuke_shell;
+	SelfDestructAs=nuke_shell;
+	Category=SKIMMERS TANK BUILDER NOTAIR NOTSUB ;
+	TEDClass=CNSTR;
+	Corpse=;
+	builder=1;
+	workertime=200;
+	UnitNumber=4;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	canmove=1;
+	autoheal=0;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	cancapture=0;
+	canrepair=0;
+	MaxVelocity=1.5;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=1030;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK2;
+	Upright=0;
+	weapon1=mininglaser;
+	OnlyTargetCategory=MINERALS;
+	NoChaseCategory=SKIMMERS;
+	BadTargetCategory=SKIMMERS;
+	HideDamage=0;
+	collide=0;
+	ImmuneToParalyzer=0;
+	shownanospray=true;
+	Builddistance=60;
+	canbeassisted=0;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 4 1;
+ 	 collisionVolumeScales = 22 21 50;
+  	collisionVolumeTest = 1;
+	[customparams]
+{
+	is_miner=1;
+	max_cargo=500;
+}
+	
+}

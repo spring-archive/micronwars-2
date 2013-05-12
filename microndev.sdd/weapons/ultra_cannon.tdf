@@ -1,0 +1,29 @@
+[ultra_cannon]
+	{
+	name=ultra cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	togroundweapon=1;
+
+        range=1300;
+	reloadtime=0.5;
+	startvelocity=1000;
+	weaponvelocity=1000;
+	areaofeffect=200;
+	accuracy=500;
+	tolerance=1000;
+	
+	soundstart=ultratank/fire01;
+	soundhit=lightexplo01;
+	
+   
+	explosiongenerator=custom:groshitzeexplosion2;
+
+
+	[DAMAGE]
+		{
+		default=1000;
+	
+    }
+	}

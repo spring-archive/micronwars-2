@@ -1,0 +1,48 @@
+[barragermissile]
+	{
+	
+	name=barrager missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+   
+	model=barmissile.s3o;
+	flighttime=20;
+    range=3500;
+	reloadtime=1;
+	weaponvelocity=1000;
+	startvelocity=400;
+	weaponacceleration=40;
+	turnrate=300;
+	weapontimer=5;
+	areaofeffect=120;
+	sprayangle=1024;
+	trajectoryheight=1.5;
+	
+	
+	soundstart=m-270fire;
+	soundhit=xplosml2;
+	selfprop=1;
+	
+	
+	firestarter=80;
+	smokedelay=0.02;
+	guidance=1;
+	tracks=0;
+	selfprop=1;
+	cruise=1;
+	smoketrail=1;
+	tolerance=2000;
+	accuracy=2000;
+	startsmoke=1;
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:groshitzeexplosion2;
+	[DAMAGE]
+		{
+		default=600;
+		
+		
+} 
+	}
+
+

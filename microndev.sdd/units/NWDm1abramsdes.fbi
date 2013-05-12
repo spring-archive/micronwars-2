@@ -1,0 +1,72 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=NWDm1abrams;
+	Version=1;
+	Side=NWD;
+	Objectname=NWDm1abramsdes.s3o;
+	Designation=NWD;
+	Name=M1A Abrams;
+	Description=Main Battle tank;
+	[CustomParams]
+	{
+		RequireTech=3 outpost;
+	}
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=8000;
+	BuildCostMetal=3000;
+	MaxDamage=4000;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	BuildTime=20000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=700;
+	mass=60000;
+	SoundCategory=Ltank;
+	Category=NWD TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	Corpse=NWDm1abrams_dead;
+	UnitNumber=5;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	canattack=1;
+	MaxVelocity=1.8;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=300;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK2;
+	Upright=0;
+	autoheal=0;
+	HideDamage=0;
+	ImmuneToParalyzer=0;
+	weapon1=NWD120mmsmoothbore;
+	weapon2=nwdm1coax752mgun;
+	WeaponSlaveTo2=1;
+	NoChaseCategory=VTOL NEUTRAL MINERALS;
+	BadTargetCategory=NEUTRAL MINERALS;
+	OnlyTargetCategory1=NOTAIR;
+	OnlyTargetCategory2=NOTAIR;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 3 0;
+ 	 collisionVolumeScales = 18 12 36;
+  	collisionVolumeTest = 1;
+	Armortype=HEAVY;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+	
+}

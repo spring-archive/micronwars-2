@@ -1,0 +1,105 @@
+[380MMFlare]
+{
+
+
+
+	[Yup]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=groundflash;
+		  size=80;
+		  sizeGrowth=0;
+		  ttl=5;
+	          colorMap=1 1 0 1  1 1 0 1    0 0 0 0.01;
+		}
+    	air=0;
+    	ground=1;
+    	water=1;
+	count=1;
+	}
+
+
+   [smoke]
+   {
+   class=CSimpleParticleSystem;
+
+      [properties]
+      {
+      alwaysVisible=1;
+      Texture=smoke;
+      sizeGrowth=1.0;
+      sizeMod=1;
+
+         pos      = 0.0, 1, 0.0;
+            emitVector  = 0.0, 1, 0.0;
+      gravity     = 0.0, 1, 0.0;
+
+      colorMap = 0.7 0.6 0.0 0.2  0.7 0.3 0.0 0.2  0.8 0.8 0.8 1.0    0.9 0.9 0.9 1.0   0 0 0 0.008;
+      airdrag     = 0.40;
+
+      particleLife=10;
+      particleLifeSpread=20;
+
+      numParticles=1;
+
+      particleSpeed=0;
+      particleSpeedSpread=2;
+      particleSize=1;
+      particleSizeSpread=5;
+
+      emitRot=90;
+      emitRotSpread=0;
+
+      directional=0;
+      useAirLos=1;
+      }
+   ground=1;
+   air=1;
+   count=1;
+   }
+
+
+
+   [Flare]
+   {
+   class=CSimpleParticleSystem;
+
+      [properties]
+      {
+      alwaysVisible=1;
+      Texture=flare;
+      sizeGrowth=1.0;
+      sizeMod=1;
+
+         pos      = 0.0, 1, 0.0;
+            emitVector  = 0.0, 1, 0.0;
+      gravity     = 0.0, 1, 0.0;
+
+      colorMap = 1 01 0.0 1   0 0 0 0.008;
+      airdrag     = 0.40;
+
+      particleLife=3;
+      particleLifeSpread=0;
+
+      numParticles=3;
+
+      particleSpeed=0;
+      particleSpeedSpread=2;
+      particleSize=20;
+      particleSizeSpread=20;
+
+      emitRot=90;
+      emitRotSpread=0;
+
+      directional=1;
+      useAirLos=1;
+      }
+   ground=1;
+   air=1;
+   count=1;
+   }
+
+
+}

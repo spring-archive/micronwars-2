@@ -1,0 +1,18 @@
+[sklvl1fighter_dead]
+{
+	world=All Worlds;
+	description=f-16 Wreckage;
+	category=corpses;
+	object=sklvl1fighterdead.S3O;
+	footprintx=3;
+	footprintz=4;
+	height=10;
+	blocking=1;
+	hitdensity=100;
+	metal=400;
+	damage=500;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=1500;
+}

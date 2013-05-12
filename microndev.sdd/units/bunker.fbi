@@ -1,0 +1,68 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=bunker;
+	Version=1;
+	Side=Skimmers;
+	Objectname=bunker.s3o;
+	Designation=Skimmers;
+	Name=Nuclear bunker;
+	Description=Launches Nuclear missiles ( Leaves heavy fallout when bunker explodes);
+	FootprintX=40;
+	FootprintZ=25;
+	BuildCostEnergy=20000;
+	BuildCostMetal=80000;
+	MaxDamage=100000;
+	MaxWaterDepth=35;
+	MaxSlope=40;
+	EnergyUse=2500;
+	BuildTime=200000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=1100;
+	SoundCategory=bunker;
+	Category=NEUTRAL NOTAIR OUTPOST ;
+	TEDClass=FORT;
+	Yardmap=oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo oooooooooooooooooooooooooooooooooooooooo;
+ 	Corpse=bunker_dead;
+	UnitNumber=4;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	ExplodeAs=falloutexplo;
+	SelfDestructAs=;
+	candgun=1;
+	canstop=0;
+	canattack=1;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	Upright=0;
+	autoheal=0;
+	firestate=1;
+	HideDamage=0;
+	weapon1=ultra_cannon;
+	weapon2=ballisticM;
+	weapon3=ultra_cannon;
+	NoChaseCategory=VTOL NEUTRAL MINERALS;
+	BadTargetCategory=VTOL NEUTRAL;
+	OnlyTargetCategory1=NOTAIR;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 20 25 -43;
+ 	 collisionVolumeScales = 501 71 331;
+  	collisionVolumeTest = 1;
+	[customparams]
+	{
+	flag=1;
+	dontcount=1;
+	do_not_destroy=yes;
+	do_not_spawn_near=yes;
+	ancient_metal=yes;
+	ancient_power=yes;	
+	}
+[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

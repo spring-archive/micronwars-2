@@ -1,0 +1,49 @@
+[nwdsa6missile]
+	{
+	
+	name=SA-6 Gainful;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+     	canattackground=0;
+	model=nwdsa6missile.s3o;
+
+	flighttime=8;
+        range=1500;
+	reloadtime=6;
+	weaponvelocity=800;
+	startvelocity=80;
+	weaponacceleration=100;
+	turnrate=5500;
+	areaofeffect=64;
+	
+    	tolerance=3000;
+	
+    	trajectoryheight=0.6;
+	soundstart=nwdsa6launch;
+	soundhit=;
+	
+	
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=1200;
+		
+		
+		
+} 
+	}
+
+

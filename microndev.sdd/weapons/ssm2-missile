@@ -1,0 +1,46 @@
+[ssm2-missile]
+	{
+	
+	name=ssm2 missile  (anti air missile);
+	rendertype=1;
+	lineofsight=1;
+    turret=1;
+	toairweapon=1;
+	togroundweapon=0;
+	noselfdamage=1;
+    model=ssm2missile.s3o;
+	flighttime=15;
+    range=3000;
+	reloadtime=10;
+	noautorange=1;
+	weaponvelocity=800;
+	startvelocity=200;
+	weaponacceleration=100;
+	turnrate=12000;
+	areaofeffect=64;
+	tolerance=3000;
+	pitchtolerance=12000;	
+	trajectoryheight=1.2;
+	highttrajectory=1;
+	soundstart=hawklaunch;
+	soundhit=;
+	firestarter=75;
+	firedelay=.0;
+    guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+    cegtag=raketenrauch5;
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=1000;
+		
+		
+		
+} 
+	}
+
+

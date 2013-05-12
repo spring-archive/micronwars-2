@@ -1,0 +1,55 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO] 
+{
+	name=Machinegun;
+	unitname=skmachinegun;
+	buildcostenergy=1200;
+	buildcostmetal=120;
+	buildtime=3200;
+	category=SKIMMERS WEAPON NOTAIR NOTLAND;
+	description=Light Machinegun;
+	[CustomParams]
+	{
+		RequireTech= outpost;
+	}
+	footprintx=2;
+	footprintz=2;
+	maxdamage=900;
+	objectname=skmachinegun.s3o;
+	side=Skimmers;
+	soundcategory=Machinegun;
+	tedclass=FORT;
+	brakerate=0;
+	acceleration=0;
+	maxvelocity=0;
+	maxslope=14;
+	yardmap=oo oo;
+	canattack=1;
+	canstop=1;
+	autoheal=0;
+	sightdistance=500;
+	weapon1=7,62mm_gun;
+	explodeas=MEDIUM_BUILDINGEX;
+	selfdestructas=MEDIUM_BUILDING;
+	onlytargetcategory1=NOTAIR HELICOPTER;
+	maxwaterdepth=0;
+	corpse=skmgun_dead;
+	smoothanim=1;
+	icontype=building;
+	bmcode=0;
+	noautofire=0;
+	buildangle=32768;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=GUARD_NOMOVE;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 1 5 -2;
+    collisionVolumeScales = 18 26 13;
+  	collisionVolumeTest = 1;
+        [SFXTypes]
+	{
+	explosiongenerator0=custom:goliathflare;
+	}
+	
+}

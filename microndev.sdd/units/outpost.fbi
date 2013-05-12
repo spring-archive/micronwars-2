@@ -1,0 +1,68 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=outpost;
+	Version=1;
+	Side=Skimmers;
+	Objectname=outpost.s3o;
+	Designation=CE-GPP;
+	Name=outpost;
+	Description=unlock units;
+	FootprintX=6;
+	FootprintZ=6;
+	BuildCostEnergy=3000;
+	BuildCostMetal=820;
+	MaxDamage=10000;
+	MaxWaterDepth=0;
+	MaxSlope=10;
+	metaluse=-1.2;
+	energyuse=-20;
+	BuildTime=6000;
+	canrepair=0;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=1000;
+	Airsightdistance=1000;
+	SoundCategory=commandsk;
+	ExplodeAs=BIG_UNITEX;
+	SelfDestructAs=ESTOR_BUILDINGEX;
+	Category=OUTPOST NOTAIR;
+	TEDClass=CNSTR;
+	Corpse=outpost_dead;
+	YardMap=oooooo oooooo oooooo oooooo oooooo oooooo;
+	icontype=bigbuilding;
+	buildangle=4096;
+	ActivateWhenBuilt=1;
+	shownanospray=0;
+	canattack=1;
+	weapon1=outpostbattery;
+	OnlyTargetCategory1=NOTAIR;
+	weapon2=rapidflak2;
+	OnlyTargetCategory2=VTOL;
+	firestate=1;
+	Ovradjust=1;
+	Capturable=1;
+	reclaimable=0;
+	shootme=0;
+	hideDamage=0;
+	autoheal=1;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 22 4;
+ 	 collisionVolumeScales = 40 70 39;
+  	collisionVolumeTest = 1;
+	[customparams]
+	{
+	flag=1;
+	dontcount=1;
+	do_not_destroy=yes;
+	do_not_spawn_near=yes;
+	ancient_metal=yes;
+	ancient_power=yes;
+	ProvideTech=outpost;
+	
+	}
+}
+

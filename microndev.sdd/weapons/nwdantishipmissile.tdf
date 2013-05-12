@@ -1,0 +1,50 @@
+[nwdantishipmissile]
+	{
+	
+	name=landbased anti ship missile;
+	rendertype=1;
+	lineofsight=1;
+    turret=1;
+     canattackground=0;
+	model=nwdantishipmissile.s3o;
+
+	flighttime=100;
+        range=4000;
+	reloadtime=7;
+	weaponvelocity=800;
+	startvelocity=110;
+	weaponacceleration=30;
+	turnrate=1500;
+	areaofeffect=128;
+	
+    	tolerance=3000;
+	
+    	trajectoryheight=2.0;
+	soundstart=antishipfrigate/antishipfire;
+	soundhit=antishipfrigate/antishipexplo;
+
+	
+	targetable=2;
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+     	
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=3000;
+		
+		
+		
+} 
+	}
+
+

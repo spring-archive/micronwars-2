@@ -1,0 +1,37 @@
+[ohiotorp]
+{
+	name=Guided Torpedo;
+	rendertype=1;
+	lineofsight=1;
+	turret=0;
+
+	model=ohiotorp.s3o;
+	propeller=1;
+
+	range=1200;
+	reloadtime=7;
+	weapontimer=15;
+	weaponvelocity=100;
+	startvelocity=100;
+	weaponacceleration=15;	
+
+	turnrate=5000;
+	areaofeffect=16;
+	soundstart=;
+	soundhit=;
+	guidance=1;
+	tracks=1;
+	selfprop=1;
+	waterweapon=1;
+	burnblow=0;
+	
+	tolerance=5000;	
+
+	
+
+	[DAMAGE]
+	{
+		default=1500;
+		
+	}
+}

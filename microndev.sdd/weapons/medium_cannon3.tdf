@@ -1,0 +1,33 @@
+[medium_cannon3]
+	{
+	name=stationary medium cannon;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+	beamweapon=1;
+	rgbcolor=1.0 0.5 0.0;
+	thickness=0.5;
+	intensity=0.8;
+	togroundweapon=1;
+
+        range=1000;
+	reloadtime=2;
+	startvelocity=500;
+	weaponvelocity=500;
+	areaofeffect=96;
+	accuracy=800;
+	tolerance=1000;
+	
+	soundstart=lightcannon01;
+	soundhit=lightexplo01;
+	
+   
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=1000;
+	
+    }
+	}

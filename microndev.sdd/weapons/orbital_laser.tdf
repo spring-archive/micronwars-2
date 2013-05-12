@@ -1,0 +1,44 @@
+[ORBITAL_LASER]
+	{
+	
+	name=Orbital Beam of Death;
+	rendertype=0;
+	lineofsight=1;
+	turret=1;
+	beamlaser=1;
+	beamtime=4.0;
+	thickness=20;
+	intensity=15;
+	corethickness=6;
+	
+
+	range=100000;
+	reloadtime=700;
+	weaponvelocity=1000;
+	areaofeffect=500;
+	
+
+	soundstart=Orbitlaser;
+	soundhit=;
+
+	firestarter=90;
+	beamweapon=1;
+	rgbColor           = 0.8 0.5 0;
+	commandfire=1;
+	stockpile=1;
+
+	
+	
+
+	
+
+	tolerance=2000;
+	impulsefactor=.1;
+	craterMult=.05;
+	craterBoost=.05;
+	explosiongenerator=custom:blue_explosion2;
+	[DAMAGE]
+		{
+		default=7000;
+		}
+	}

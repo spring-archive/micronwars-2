@@ -1,0 +1,18 @@
+[bunker_dead]
+{
+	world=All Worlds;
+	description=nuclear bunker Wreckage;
+	category=corpses;
+	object=bunkerwreck.S3O;
+	footprintx=40;
+	footprintz=25;
+	height=120;
+	blocking=1;
+	hitdensity=100;
+	metal=200000;
+	damage=5000;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=0;
+}

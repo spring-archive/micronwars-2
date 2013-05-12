@@ -1,0 +1,71 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=NWDbradley;
+	Side=NWD;
+	Objectname=NWDbradley.s3o;
+	Name=M3A Bradley;
+	Description=light Recon tank;
+	[CustomParams]
+	{
+		RequireTech= 3 outpost;
+	}
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=3500;
+	BuildCostMetal=350;
+	MaxDamage=1000;
+	MaxWaterDepth=35;
+	MaxSlope=27;
+	BuildTime=7500;
+	loadingRadius=120;
+	releaseHeld=1;
+	transportCapacity=12;
+    transportMass=750;
+    transportSize=1;
+    transportUnloadMethod=2;
+    turninplace=0;
+	unloadSpread=3;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=750;
+	SoundCategory=Ltank;
+	Category=NWD TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	Corpse=nwdbradley_dead;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	mass=10000;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	canattack=1;
+	MaxVelocity=2.0;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=300;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK2;
+	Upright=0;
+	autoheal=0;
+	weapon1=NWDlightcannon;
+	weapon2=nwdTOWmissile;
+	WeaponSlaveTo2=1;
+	OnlyTargetCategory1=NOTAIR;
+	OnlyTargetCategory2=NOTAIR;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = -2 3 0;
+ 	 collisionVolumeScales = 18 14 29;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

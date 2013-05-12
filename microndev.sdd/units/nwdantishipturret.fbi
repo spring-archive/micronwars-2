@@ -1,0 +1,48 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO] // Generated with TAS Modit v2.2 Beta
+{
+	name=guided antiship missile;
+	unitname=nwdantishipturret;
+	buildcostenergy=4375;
+	buildcostmetal=438;
+	buildtime=11375;
+	category=SKIMMERS WEAPON NOTAIR;
+	description=launches guided missiles at Ships (only 6 can be build);
+	[CustomParams]
+	{
+		RequireTech=4 outpost;
+		
+	}
+	footprintx=3;
+	footprintz=3;
+	maxdamage=3500;
+	objectname=nwdantishipturret.s3o;
+	side=Skimmers;
+	soundcategory=;
+	tedclass=FORT;
+	maxslope=14;
+	yardmap= ooo ooo ooo;
+	canattack=1;
+	canstop=1;
+	autoheal=0;
+	sightdistance=950;
+	weapon1=nwdantishipmissile;
+	explodeas=MEDIUM_BUILDINGEX;
+	selfdestructas=MEDIUM_BUILDING;
+	OnlyTargetCategory1=SHIP;
+    corpse=; 
+	unitrestricted=6;
+	smoothanim=1;
+	icontype=building;
+	bmcode=0;
+	buildangle=32768;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=GUARD_NOMOVE;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = -1 2 2;
+ 	 collisionVolumeScales = 39 23 43;
+  	collisionVolumeTest = 1;
+        
+}

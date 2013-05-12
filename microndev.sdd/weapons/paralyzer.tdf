@@ -1,0 +1,36 @@
+[paralyzer]
+	{
+	name=sniper;
+	rendertype=4;
+	lineofsight=1;
+	turret=1;
+	togroundweapon=1;
+	beamweapon=1;
+	rgbcolor=1.0 0.5 0.0;
+	thickness=0.1;
+	intensity=0.3;
+	range=1300;
+	reloadtime=8;
+	weaponvelocity=1000;
+	startvelocity=1000;
+	weaponacceleration=1000;
+	turnrate=12384;
+	areaofeffect=16;
+	paralyzer=1;
+	paralyzertime=30;
+	noautorange=1;
+	soundstart=sniper2;
+	//soundhit=gau8hit;
+	tolerance=1000;
+	accuracy=80;
+	
+	//explosiongenerator=custom:miniexplo2;
+    	noselfdamage=1;
+	friendlyfire=0;
+	collidefriendly=0;
+	[DAMAGE]
+		{
+		default=500;
+		
+		}
+	}

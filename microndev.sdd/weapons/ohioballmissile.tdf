@@ -1,0 +1,56 @@
+[ohioballmissile]
+	{
+	name=Ballistic Missile;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=ohioballmissile.s3o;
+
+	range=70000;
+	reloadtime=350;
+	submissile=1;
+	fireSubmersed=1;
+	noautorange=1;
+	weapontimer=8;
+	flighttime=700;
+	starvelocity=10;
+	weaponvelocity=800;
+	weaponacceleration=100;
+	turnrate=3000;
+	areaofeffect=450;
+	
+
+	
+	stockpile=1;
+	commandfire=1;
+	cruise=1;
+	targetable=2;
+	
+
+	soundstart=icbmlaunch;
+	soundhit=NUCLEAREXPLOSION;
+
+	firestarter=100;
+	smokedelay=0.02;
+	selfprop=1;
+	cegtag=raketenrauch;
+	explosiongenerator=custom:nuke_450;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	
+
+	
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=4000;
+		
+		
+		}
+	}
+

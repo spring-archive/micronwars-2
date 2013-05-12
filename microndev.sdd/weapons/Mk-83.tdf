@@ -1,0 +1,29 @@
+[Mk-83]
+{
+	name=Mk-83;
+	rendertype=6;
+	dropped=1;
+	model=Mk-83.s3o;
+	ToGroundWeapon=1;
+	toairweapon=0;
+	range=1000;
+        reloadtime=30;
+	areaofeffect=200;
+	burst=25;
+	burstrate=0.2;
+	sprayangle=512;
+	collideFriendly=0;
+	soundstart=bombdropxx;
+	soundhit=bombEXPLOBIG;
+	explosiongenerator=custom:crabexplo;
+	noselfdamage=1;
+	friendlyfire=0;
+	collidefriendly=0;
+	tolerance=1000;
+	accuracy=1000;
+	[DAMAGE]
+		{
+		default=1200;
+		
+		}
+	}

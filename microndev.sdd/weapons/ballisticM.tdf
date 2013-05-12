@@ -1,0 +1,54 @@
+[BallisticM]
+	{
+	name=Ballistic Missile;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=ballisticm.s3o;
+
+	range=70000;
+	reloadtime=500;
+	
+	noautorange=1;
+	weapontimer=20;
+	flighttime=700;
+
+	weaponvelocity=400;
+	weaponacceleration=100;
+	turnrate=20000;
+	areaofeffect=1000;
+	
+
+	
+	stockpile=1;
+	commandfire=1;
+	cruise=1;
+	targetable=1;
+
+	soundstart=icbmlaunch;
+	soundhit=NUCLEAREXPLOSION;
+
+	firestarter=100;
+	smokedelay=0.02;
+	selfprop=1;
+	cegtag=raketenrauchICBM;
+	explosiongenerator=custom:london;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	
+
+	
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=5000;
+		
+		
+		}
+	}
+

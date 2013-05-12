@@ -1,0 +1,59 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=NWDcom;
+	Version=1;
+	Side=Skimmers;
+	Objectname=NWDcom.s3o;
+	Designation=CE-GPP;
+	Name=Command Building;
+	Description=Main Base;
+	
+	FootprintX=12;
+	FootprintZ=12;
+	BuildCostEnergy=30000;
+	BuildCostMetal=4000;
+	MaxDamage=20000;
+	MaxWaterDepth=0;
+	MaxSlope=10;
+	EnergyUse=0;
+	BuildTime=12500;
+	WorkerTime=550;
+	Builddistance=1000;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=1000;
+	SoundCategory=commandbuilding;
+	energymake=50;
+	metalmake=5.0;
+	ExplodeAs=;
+	SelfDestructAs=;
+	Category=NWD Commander NOTAIR NOTSUB ;
+	TEDClass=COMMANDER;
+	Corpse=NWDcom_dead;
+	radardistance=800;
+	icontype=bigbuilding;
+	
+	buildangle=4096;
+	ActivateWhenBuilt=1;
+	Ovradjust=1;
+	commander=1;
+	autoheal=0;
+	shownanospray=false;
+	canresurrect=1;
+	resurrectspeed=1000;
+	ArmorType=ULTRA;
+	canbeassisted=0;
+	terraformspeed=2000;
+	reclaimspeed=2000;
+	capturable=0;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 11 13 16;
+ 	 collisionVolumeScales = 190 49 136;
+  	collisionVolumeTest = 1;
+	}
+

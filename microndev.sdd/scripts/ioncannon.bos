@@ -1,0 +1,167 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  base, cannon1, flare1, cannon2, flare2, cannon3, flare3, cannon4, flare4, door11, door12, door13, door14, door21, door22, door23, door24, door31, door32, door33, door34, door41, door42, door43, door44, turret, radar, ionpoint;
+
+static-var  Restore_delay, Static_Var_1;
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from base;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+Create()
+{
+	spin turret around y-axis speed <50.000000> ;
+	turn radar to x-axis <-30.000000> speed <2.000000> ;
+	move ionpoint to y-axis [5000.000000] now;
+	turn flare1 to x-axis <-90> now;
+	turn flare2 to x-axis <-90> now;
+	turn flare3 to x-axis <-90> now;
+	turn flare4 to x-axis <-90> now;
+	Restore_delay = 5000;
+	start-script SmokeUnit();
+}
+
+
+
+RestoreAfterDelay()
+{
+	sleep Restore_delay;
+	turn door11 to z-axis <0.000000> speed <4.000000>;
+	turn door12 to x-axis <0.000000> speed <4.000000>;
+	turn door13 to z-axis <0.000000> speed <4.000000>;
+	turn door14 to x-axis <0.000000> speed <4.000000>;
+	turn door21 to z-axis <0.000000> speed <4.000000>;
+	turn door22 to x-axis <0.000000> speed <4.000000>;
+	turn door23 to z-axis <0.000000> speed <4.000000>;
+	turn door24 to x-axis <0.000000> speed <4.000000>;
+	turn door31 to z-axis <0.000000> speed <4.000000>;
+	turn door32 to x-axis <0.000000> speed <4.000000>;
+	turn door33 to z-axis <0.000000> speed <4.000000>;
+	turn door34 to x-axis <0.000000> speed <4.000000>;
+	turn door41 to z-axis <0.000000> speed <4.000000>;
+	turn door42 to x-axis <0.000000> speed <4.000000>;
+	turn door43 to z-axis <0.000000> speed <4.000000>;
+	turn door44 to x-axis <0.000000> speed <4.000000>;
+	move cannon1 to y-axis [0.000000] speed [3.000000];
+	move cannon2 to y-axis [0.000000] speed [3.000000];
+	move cannon3 to y-axis [0.000000] speed [3.000000];
+	move cannon4 to y-axis [0.000000] speed [3.000000];
+}
+
+
+
+AimWeapon1(heading, pitch)
+{
+	signal 2;
+	set-signal-mask 2;
+	turn door11 to z-axis <55.000000> speed <4.000000>;
+	turn door12 to x-axis <55.000000> speed <4.000000>;
+	turn door13 to z-axis <-55.000000> speed <4.000000>;
+	turn door14 to x-axis <-55.000000> speed <4.000000>;
+	turn door21 to z-axis <55.000000> speed <4.000000>;
+	turn door22 to x-axis <55.000000> speed <4.000000>;
+	turn door23 to z-axis <-55.000000> speed <4.000000>;
+	turn door24 to x-axis <-55.000000> speed <4.000000>;
+	turn door31 to z-axis <55.000000> speed <4.000000>;
+	turn door32 to x-axis <55.000000> speed <4.000000>;
+	turn door33 to z-axis <-55.000000> speed <4.000000>;
+	turn door34 to x-axis <-55.000000> speed <4.000000>;
+	turn door41 to z-axis <55.000000> speed <4.000000>;
+	turn door42 to x-axis <55.000000> speed <4.000000>;
+	turn door43 to z-axis <-55.000000> speed <4.000000>;
+	turn door44 to x-axis <-55.000000> speed <4.000000>;
+	Wait-for-turn door11 around z-axis;
+	Wait-for-turn door21 around z-axis;
+	Wait-for-turn door31 around z-axis;
+	Wait-for-turn door41 around z-axis;
+	move cannon1 to y-axis [7.000000] speed [2.000000];
+	move cannon2 to y-axis [7.000000] speed [2.000000];
+	move cannon3 to y-axis [7.000000] speed [2.000000];
+	move cannon4 to y-axis [7.000000] speed [2.000000];
+	wait-for-move cannon1 along y-axis;
+	wait-for-move cannon2 along y-axis;
+	wait-for-move cannon3 along y-axis;
+	wait-for-move cannon4 along y-axis;
+
+	emit-sfx 2049 from flare1;
+	emit-sfx 2050 from flare2;
+	emit-sfx 2051 from flare3;
+	emit-sfx 2052 from flare4;
+	
+	start-script RestoreAfterDelay();
+	return (1);
+	}
+
+FireWeapon1()
+{
+	
+	
+}
+
+AimFromWeapon1(piecenum)
+{
+
+	piecenum = ionpoint;
+	
+}
+
+QueryWeapon1(piecenum)
+{
+	piecenum = ionpoint;
+}
+
+
+SweetSpot(piecenum)
+{
+	piecenum = base;
+}
+
+Killed(severity, corpsetype)
+{
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode base type BITMAPONLY | BITMAP1;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode base type SHATTER | BITMAP1;
+		return (0);
+	}
+	if( severity <= 100 )
+	{
+		corpsetype = 3;
+		explode base type SHATTER | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	}
+	corpsetype = 3;
+	explode base type SHATTER | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+}

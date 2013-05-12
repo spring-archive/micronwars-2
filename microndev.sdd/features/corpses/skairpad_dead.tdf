@@ -1,0 +1,22 @@
+[skairpad_dead]
+{
+	world=All Worlds;
+	description=airfield Wreckage;
+	category=corpses;
+	object=skairpadwreck.S3O;
+	footprintx=28;
+	footprintz=15;
+	height=10;
+	blocking=1;
+	hitdensity=100;
+	metal=1500;
+	damage=5000;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=4000;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = -73 -21 0;
+ 	 collisionVolumeScales = 436 57 241;
+  	collisionVolumeTest = 1;
+}

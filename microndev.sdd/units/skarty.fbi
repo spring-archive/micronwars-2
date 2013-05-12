@@ -1,0 +1,75 @@
+// Copyrighted : Razorblade;
+[UNITINFO]
+	{
+	UnitName=skarty;
+	Version=1;
+	Side=SKIMMERS;
+	Objectname=skarty.s3o;
+	Designation=IS-ERDT;
+	Description=Artillery Turret;
+	[CustomParams]
+	{
+		RequireTech=7 outpost;
+		
+	}
+	Name= Artillery System;
+	FootprintX=4;
+	FootprintZ=4;
+	BuildCostEnergy=15000;
+	BuildCostMetal=6000;
+	MaxDamage=1200;
+	MaxWaterDepth=0;
+	MaxSlope=14;
+	EnergyUse=50;
+	BuildTime=90000;
+	WorkerTime=0;
+	BMcode=0;
+	Builder=0;
+	bmcode=0;
+	threed=1;
+	zbuffer=1;
+	noautofire=0;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=950;
+	RadarDistance=0;
+	SoundCategory=GUARD;
+	EnergyStorage=0;
+	MetalStorage=0;
+	ExplodeAs=MEDIUM_BUILDINGEX;
+	SelfDestructAs=MEDIUM_BUILDING;
+	Category=SKIMMERS weapon NOTAIR NOTSUB ;
+	TEDClass=FORT;
+	YardMap=oooooooooooooooo;
+	Corpse=;
+	UnitNumber=139; 
+	canstop=1;
+	ShootMe=1;
+	DefaultMissionType=GUARD_NOMOVE;
+	buildangle=32768;
+	canattack=1;
+	Weapon1=skartyweap;
+	badTargetCategory1=VTOL;
+	NoChaseCategory=VTOL NEUTRAL MINERALS;
+	OnlyTargetCategory1=NOTAIR;
+	Ovradjust=1;
+	ActivateWhenBuilt=1;
+	onoffable=1;
+	firestandorders=1;
+	StandingFireOrder=2;
+	NoAutoFire=0;
+	autoheal=0;
+	onlytargetcategory1=NOTAIR;
+	NoChaseCategory=outpost;
+	BadTargetCategory=outpost;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 -2 -5;
+ 	 collisionVolumeScales = 36 40 40;
+  	collisionVolumeTest = 1;
+[SFXTypes]
+	{
+	explosiongenerator0=custom:380MMFlare;
+	
+	}
+	
+	}

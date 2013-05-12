@@ -1,0 +1,52 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=SKtankfac;
+	Version=1;
+	Side=Skimmers;
+	Objectname=SKtankfac.s3o;
+	Designation=CE-GPP;
+	Name=Automated Tankfactory;
+	Description=builds tanks;
+	FootprintX=10;
+	FootprintZ=10;
+	BuildCostEnergy=3600;
+	BuildCostMetal=900;
+	MaxDamage=11000;
+	MaxWaterDepth=0;
+	MaxSlope=35;
+	EnergyUse=0;
+	BuildTime=12000;
+	WorkerTime=280;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=450;
+	SoundCategory=Factorysk;
+	
+	ExplodeAs=BIG_UNITEX;
+	SelfDestructAs=;
+	Category=SKIMMERS FACTORY NOWEAPON NOTAIR NOTSUB ;
+	TEDClass=PLANT;
+	Corpse=sktankfac_dead;
+	YardMap=oooooooooo occccooooo occccooooo occccooooo oocccooooo occccooooo occccooooo occccooooo occccooooo occccooooo;
+	icontype=bigbuilding;
+	UnitNumber=7733;
+	
+	ActivateWhenBuilt=1;
+	canbeassisted=0;
+	Ovradjust=1;
+	autoheal=0;
+	CanRepeat=1;
+	shownanospray=false;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 20 -10 -4;
+ 	 collisionVolumeScales = 145 78 167;
+  	collisionVolumeTest = 1;
+	
+	
+	}
+

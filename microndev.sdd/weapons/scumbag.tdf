@@ -1,0 +1,36 @@
+[scumbag]
+{	
+	name=Scumbag BOMB;
+	rendertype=1;
+	lineofsight=1;
+	turret=0;
+	togroundweapon=1;
+	toairweapon=0;
+	model=dominatorbomb.s3o;
+	propeller=1;
+
+	range=1000;
+	reloadtime=15;
+	weapontimer=4;
+	weaponvelocity=110;
+	startvelocity=100;
+	weaponacceleration=15;	
+
+	turnrate=100;
+	areaofeffect=16;
+	soundstart=bombdropxx;
+	soundhit=bombEXPLOBIG;
+	guidance=1;
+	
+	selfprop=1;
+	burnblow=1;
+
+	tolerance=32767;
+
+	explosiongenerator=custom:crabexplo;
+	[DAMAGE]
+		{
+		default=1200;
+		
+		}
+	}

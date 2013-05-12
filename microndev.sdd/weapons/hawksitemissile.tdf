@@ -1,0 +1,49 @@
+[hawksitemissile]
+	{
+	
+	name=hawk missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+     	toairweapon=1;
+	model=hawksitemissile.s3o;
+
+	flighttime=8;
+        range=2500;
+	reloadtime=4;
+	weaponvelocity=800;
+	startvelocity=110;
+	weaponacceleration=100;
+	turnrate=5500;
+	areaofeffect=64;
+	
+    	tolerance=3000;
+	
+    	trajectoryheight=0.8;
+	soundstart=hawklaunch;
+	soundhit=;
+	
+	
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=2000;
+		
+		
+		
+} 
+	}
+
+

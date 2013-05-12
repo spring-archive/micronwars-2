@@ -1,0 +1,18 @@
+[sklvl1powplant_dead]
+{
+	world=All Worlds;
+	description=powerplant lvl1 Wreckage;
+	category=corpses;
+	object=sklvl1powplantwreck.S3O;
+	footprintx=3;
+	footprintz=4;
+	height=10;
+	blocking=1;
+	hitdensity=100;
+	metal=400;
+	damage=500;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=1500;
+}

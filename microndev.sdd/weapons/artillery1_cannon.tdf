@@ -1,0 +1,31 @@
+[artillery1_cannon]
+	{
+	name=Artillery cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	size=0.3;
+	
+    range=3800;
+	reloadtime=0.3;
+	
+	weaponvelocity=500;
+	areaofeffect=256;
+	accuracy=2000;
+	tolerance=1000;
+	
+	soundstart=artyfire2;
+	soundhit=artyexplo1;
+   
+	
+	
+	explosiongenerator=custom:SS2explosion_UHE;
+	
+
+
+	[DAMAGE]
+		{
+		default=1000;
+	
+    }
+	}

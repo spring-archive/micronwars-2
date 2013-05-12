@@ -1,0 +1,351 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  body, turret, sleeve, barrel, flare, track1, track2, track3,
+       missile1, missile2, missile3, missile4, stinger, turret1, sleeve1, extend1,
+       extend2, magnet, link;
+
+static-var  Static_Var_1, bMoving, Static_Var_3, Static_Var_4, Static_Var_5,
+            Static_Var_6, Static_Var_7, Static_Var_8, Static_Var_9;
+
+
+TreadControl(Func_Var_1, Func_Var_2)
+{
+	Func_Var_1 = Rand( 200, 350 );
+	while( bMoving )
+	{
+		++Func_Var_2;
+		if( Func_Var_2 == 4 )
+		{
+			Func_Var_2 = 1;
+		}
+		if( Func_Var_2 == 1 )
+		{
+			show track1;
+			hide track2;
+			hide track3;
+		}
+		if( Func_Var_2 == 2 )
+		{
+			show track2;
+			hide track3;
+			hide track1;
+		}
+		if( Func_Var_2 == 3 )
+		{
+			show track3;
+			hide track2;
+			hide track1;
+		}
+		sleep 30;
+	}
+}
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from body;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+Halt()
+{
+	sleep 250;
+	if( !bMoving )
+	{
+		Static_Var_1 = 0;
+	}
+}
+
+StartMoving()
+{
+	bMoving = TRUE;
+	if( !Static_Var_1 )
+	{
+		start-script TreadControl();
+	}
+}
+
+StopMoving()
+{
+	bMoving = FALSE;
+	start-script Halt();
+}
+
+Create()
+{
+	hide flare;
+	hide track2;
+	hide track1;
+	Static_Var_4 = 0;
+	Static_Var_5 = 4;
+	bMoving = FALSE;
+	Static_Var_1 = 0;
+	Static_Var_3 = 10000;
+	start-script SmokeUnit();
+}
+
+Reload()
+{
+	sleep 5000;
+	show missile1;
+	sleep 3500;
+	show missile2;
+	sleep 3500;
+	show missile3;
+	sleep 3500;
+	show missile4;
+	sleep 13500;
+	Static_Var_5 = 4;
+}
+
+RestoreAfterDelay()
+{
+	sleep Static_Var_3;
+	turn turret to y-axis <0.000000> speed <40.000000>;
+	turn sleeve to x-axis <0.000000> speed <20.000000>;
+	turn stinger to z-axis <0.000000> speed <20.000000>;
+}
+
+AimWeapon1(Func_Var_1, Func_Var_2)
+{
+	signal 1;
+	set-signal-mask 1;
+	turn turret to y-axis Func_Var_1 speed <70.000000>;
+	turn sleeve to x-axis <0.000000> - Func_Var_2 speed <50.000000>;
+	wait-for-turn turret around y-axis;
+	wait-for-turn sleeve around x-axis;
+	start-script RestoreAfterDelay();
+	return (1);
+}
+
+AimWeapon2(Func_Var_1, Func_Var_2)
+{
+	signal 2;
+	set-signal-mask 2;
+	if( Static_Var_5 < 1 )
+	{
+		sleep 800;
+	}
+	if( Static_Var_5 > 0 )
+	{
+		turn stinger to z-axis <90.000000> speed <40.000000>;
+		wait-for-turn turret around y-axis;
+		wait-for-turn stinger around z-axis;
+		return (1);
+	}
+}
+
+FireWeapon1()
+{
+	move barrel to z-axis [-1.000000] now;
+	sleep 50;
+	emit-sfx 1024 | 0 from flare;
+	move barrel to z-axis [0.000000] speed [5.000000];
+}
+
+FireWeapon2()
+{
+	--Static_Var_5;
+	if( Static_Var_5 == 0 )
+	{
+		start-script Reload();
+	}
+	if( Static_Var_4 == 0 )
+	{
+		hide missile1;
+	}
+	if( Static_Var_4 == 1 )
+	{
+		hide missile2;
+	}
+	if( Static_Var_4 == 2 )
+	{
+		hide missile3;
+	}
+	if( Static_Var_4 == 3 )
+	{
+		hide missile4;
+	}
+	++Static_Var_4;
+	if( Static_Var_4 == 4 )
+	{
+		Static_Var_4 = 0;
+	}
+}
+
+AimFromWeapon2(Func_Var_1)
+{
+	Func_Var_1 = 1;
+}
+
+AimFromWeapon1(Func_Var_1)
+{
+	Func_Var_1 = 1;
+}
+
+QueryWeapon1(Func_Var_1)
+{
+	Func_Var_1 = 4;
+}
+
+QueryWeapon2(Func_Var_1)
+{
+	if( Static_Var_4 == 1 )
+	{
+		Func_Var_1 = 8;
+	}
+	if( Static_Var_4 == 2 )
+	{
+		Func_Var_1 = 9;
+	}
+	if( Static_Var_4 == 3 )
+	{
+		Func_Var_1 = 10;
+	}
+	if( Static_Var_4 == 4 )
+	{
+		Func_Var_1 = 11;
+	}
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = body;
+}
+
+BoomCalc(posxz, posy)
+{
+	var Func_Var_3, Func_Var_4, Func_Var_5;
+	Func_Var_3 = get PIECE_XZ(turret) - posxz;
+	Func_Var_4 = posy - get PIECE_Y(turret) - [1000.000000];
+	Func_Var_5 = get XZ_HYPOT(Func_Var_3);
+	Static_Var_6 = get HYPOT(Func_Var_5,Func_Var_4) - [1000.000000];
+	Static_Var_7 = get XZ_ATAN(Func_Var_3);
+	Static_Var_8 = get ATAN(Func_Var_4,Func_Var_5);
+	Static_Var_9 = Static_Var_1 < [190.000000];
+}
+
+BoomExtend()
+{
+	turn turret1 to y-axis Static_Var_7 speed <1000.000000>;
+	turn magnet to x-axis Static_Var_8 speed <1000.000000>;
+	turn sleeve1 to x-axis <0.000000> - Static_Var_8 speed <1000.000000>;
+	move extend1 to z-axis Static_Var_6 / [0.000006] speed [1000.000000];
+	move extend2 to z-axis Static_Var_6 / [0.000006] speed [1000.000000];
+	wait-for-turn turret1 around y-axis;
+	wait-for-turn sleeve1 around x-axis;
+	wait-for-move extend1 along z-axis;
+	wait-for-move extend2 along z-axis;
+}
+
+BoomReset()
+{
+	turn turret1 to y-axis <180.000000> speed <1000.000000>;
+	turn magnet to x-axis <0.000000> speed <1000.000000>;
+	turn sleeve1 to x-axis <0.000000> speed <1000.000000>;
+	move extend1 to z-axis [0.000000] speed [1000.000000];
+	move extend2 to z-axis [0.000000] speed [1000.000000];
+}
+
+BoomToPad()
+{
+	turn turret1 to y-axis <180.000000> speed <1000.000000>;
+	turn magnet to x-axis <0.000000> speed <1000.000000>;
+	turn sleeve1 to x-axis <-20.000000> speed <1000.000000>;
+	move extend1 to z-axis [0.000000] speed [1000.000000];
+	move extend2 to z-axis [0.000000] speed [1000.000000];
+	wait-for-turn turret1 around y-axis;
+	wait-for-turn sleeve1 around x-axis;
+	wait-for-move extend1 along z-axis;
+	wait-for-move extend2 along z-axis;
+	turn magnet to x-axis <-30.000000> speed <1000.000000>;
+	turn sleeve1 to x-axis <30.000000> speed <1000.000000>;
+	wait-for-turn sleeve1 around x-axis;
+}
+
+TransportPickup(unitid)
+{
+	call-script BoomCalc(get UNIT_XZ(unitid),get UNIT_Y(unitid) + get UNIT_HEIGHT(unitid));
+	if( Static_Var_9 AND get UNKNOWN_UNIT_VALUE(74)(unitid) == get UNKNOWN_UNIT_VALUE(74)(get UNKNOWN_UNIT_VALUE(71)) )
+	{
+		set BUSY to 1;
+		call-script BoomExtend();
+		move link to y-axis [0.000000] - get UNIT_HEIGHT(unitid) now;
+		attach-unit unitid to link;
+		call-script BoomToPad();
+		attach-unit unitid to 0 - 1;
+		call-script BoomReset();
+		set BUSY to 0;
+	}
+}
+
+TransportDrop(unitid, position)
+{
+	call-script BoomCalc(position,get GROUND_HEIGHT(position) + get UNIT_HEIGHT(unitid));
+	if( Static_Var_9 )
+	{
+		set BUSY to 1;
+		call-script BoomToPad();
+		move link to y-axis [0.000000] - get UNIT_HEIGHT(unitid) now;
+		attach-unit unitid to link;
+		call-script BoomExtend();
+		drop-unit unitid;
+		call-script BoomReset();
+		set BUSY to 0;
+	}
+}
+
+Killed(severity, corpsetype)
+{
+	hide flare;
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode body type BITMAPONLY | BITMAP1;
+		explode barrel type BITMAPONLY | BITMAP5;
+		explode turret type BITMAPONLY | BITMAP1;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode body type SHATTER | BITMAP1;
+		explode barrel type FALL | BITMAP5;
+		explode turret type FALL | BITMAP1;
+		return (0);
+	}
+	if( severity <= 100 )
+	{
+		corpsetype = 3;
+		explode body type SHATTER | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode barrel type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode turret type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	}
+	corpsetype = 3;
+	explode body type SHATTER | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	explode barrel type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+	explode turret type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+}

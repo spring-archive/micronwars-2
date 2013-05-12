@@ -1,0 +1,18 @@
+[sktankfac_dead]
+{
+	world=All Worlds;
+	description=Factory Wreckage;
+	category=corpses;
+	object=sktankfac_dead.S3O;
+	footprintx=8;
+	footprintz=8;
+	height=10;
+	blocking=1;
+	hitdensity=100;
+	metal=2000;
+	damage=500;
+	reclaimable=1;
+	featurereclamate=SMUDGE01;
+	seqnamereclamate=TREE1RECLAMATE;
+	energy=5000;
+}

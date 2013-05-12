@@ -1,0 +1,49 @@
+[nwdsa2missile]
+	{
+	
+	name=SA-2 Guideline;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+     	toairweapon=1;
+	model=nwdsa2missile.s3o;
+
+	flighttime=30;
+        range=4000;
+	reloadtime=5;
+	weaponvelocity=800;
+	startvelocity=80;
+	weaponacceleration=100;
+	turnrate=1500;
+	areaofeffect=64;
+	
+    	tolerance=3000;
+	
+    	trajectoryheight=1.0;
+	soundstart=sa-2fire;
+	soundhit=;
+	
+	
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:kleineexplo3;
+
+
+	[DAMAGE]
+		{
+		default=7000;
+		
+		
+		
+} 
+	}
+
+

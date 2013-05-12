@@ -1,0 +1,49 @@
+[HARM]
+	{
+	
+	name=H.A.R.Missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=0;
+	CanAttackair=0;
+	CanAttackground=0;
+     
+	model=dominatorharm.s3o;
+
+	weapontimer=5;
+	flighttime=20;
+        range=3000;
+	reloadtime=4;
+	weaponvelocity=1200;
+	startvelocity=1000;
+	weaponacceleration=100;
+	turnrate=16500;
+	areaofeffect=15;
+	trajectoryheight=1.0;
+    	tolerance=1000;
+	pitchtolerance=12000;
+    
+	soundstart=missle08;
+	soundhit=xplosml2;
+
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+       	
+	cegtag=raketenrauch;
+	explosiongenerator=custom:samexplo3;
+
+
+	[DAMAGE]
+		{
+		default=3200;
+		
+		
+} 
+	}
+
+

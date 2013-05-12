@@ -1,0 +1,43 @@
+[nwd14rocketpod]
+	{
+	
+	name=Small Rocketpods;
+	rendertype=1;
+	lineofsight=1;
+
+	model=nwddefrocket.s3o;
+
+	range=750;
+	reloadtime=0.4;
+	flighttime=7;
+	weaponvelocity=900;
+	startvelocity=900;
+	weaponacceleration=130;
+	areaofeffect=32;
+	soundtrigger=1;
+	tolerance=8000;
+	accuracy=400;	
+	targetMoveError=0.5;
+	soundstart=nwdrocketpodlaunch;
+	soundhit=;
+
+	firestarter=70;
+	
+	guidance=0;
+	tracks=0;
+	selfprop=1;
+	smoketrail=1;
+	
+	explosiongenerator=custom:kleineexplo6;
+
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=60;
+		
+	
+        }
+	}
+

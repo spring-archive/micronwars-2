@@ -1,0 +1,58 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=hawkradardes;
+	Version=1;
+	Side=Skimmers;
+	Objectname=hawkradardes.s3o;
+	Designation=CE-GPP;
+	Name=Hawk command radar;
+	Description=detects planes;
+	[CustomParams]
+	{
+		RequireTech=2 outpost;
+	}
+	
+	FootprintX=4;
+	FootprintZ=4;
+	BuildCostEnergy=5000;
+	BuildCostMetal=1300;
+	MaxDamage=3500;
+	MaxWaterDepth=0;
+	MaxSlope=10;
+	EnergyUse=0;
+	BuildTime=15000;
+	WorkerTime=250;
+	Builddistance=2000;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=1000;
+	SoundCategory=;
+	ExplodeAs=;
+	SelfDestructAs=;
+	Category=NWD radar NOTAIR NOTSUB ;
+	TEDClass=cnstr;
+	Corpse=hawkradar_dead;
+	radardistance=4000;
+	icontype=bigbuilding;
+	UnitNumber=7733;
+	buildangle=4096;
+	ActivateWhenBuilt=1;
+	Ovradjust=1;
+	autoheal=0;
+	repaircost=10;
+	shownanospray=false;
+	ArmorType=ULTRA;
+	canbeassisted=0;
+	unitrestricted=1;
+	capturable=1;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 3 -2;
+ 	 collisionVolumeScales = 22 30 56;
+  	collisionVolumeTest = 1;
+	}
+

@@ -1,0 +1,31 @@
+[ioncannonfake]
+	{
+	
+	name=eyecandy;
+	rendertype=4;
+	lineofsight=1;
+	turret=1;
+	togroundweapon=1;
+	beamweapon=1;
+	beamtime=5000;
+	rgbColor           = 0.8 0.5 0;
+	corethickness=5;
+		soundstart=Orbitlaser2;
+	thickness=10;
+	intensity=10;
+	duration=5000;
+	
+    range=5000;
+	reloadtime=6;
+	startvelocity=10000;
+	weaponvelocity=10000;
+	areaofeffect=0;
+	accuracy=300;
+	tolerance=1000;
+	
+	[DAMAGE]
+		{
+		default=0;
+	
+    }
+	}

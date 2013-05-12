@@ -1,0 +1,49 @@
+[rocketpod]
+	{
+	
+	name=pod missile;
+	rendertype=1;
+	lineofsight=1;
+       	turret=1;
+     	
+	model=rocket.s3o;
+
+	
+        range=800;
+	reloadtime=0.3;
+	flighttime=7;
+	weaponvelocity=800;
+	startvelocity=300;
+	weaponacceleration=200;
+	turnrate=1000;
+	areaofeffect=48;
+	
+    	tolerance=1000;
+	
+    	
+	soundstart=ultratank/rockfire01;
+	soundhit=xplosml2;
+	
+	
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=0;
+	tracks=0;
+	selfprop=1;
+	smoketrail=1;
+       	
+	
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=80;
+		
+		
+} 
+	}
+
+

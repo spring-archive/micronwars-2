@@ -1,0 +1,42 @@
+[antishipmissile]
+{
+	name=Antiship missile;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+	model=asmissile.s3o;
+	flighttime=12;
+	range=3000;
+	reloadtime=15;
+	
+	weaponvelocity=900;
+	startvelocity=150;
+	weaponacceleration=120;
+	
+	trajectoryheight=0.6;
+
+	turnrate=800;
+	areaofeffect=256;
+	
+
+	soundstart=antishipfrigate/antishipfire;
+	soundhit=antishipfrigate/antishipexplo;
+
+
+	firestarter=80;
+	smokedelay=0.02;
+	guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+	tolerance=1000;
+	startsmoke=1;
+	cegtag=weisraketenrauch;
+	explosiongenerator=custom:COMM_EXPLOSION;
+
+	[DAMAGE]
+	{
+		default=2500;
+		
+	}
+}

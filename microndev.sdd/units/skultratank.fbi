@@ -1,0 +1,70 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=skultratank;
+	Version=1;
+	Side=Skimmers;
+	Objectname=skultratank.s3o;
+	Designation=Skimmers;
+	Name=Annihilator;
+	Description=Very Heavy Base Destroyer;
+	[CustomParams]
+	{
+		RequireTech=6 outpost;
+		
+	}
+	FootprintX=2;
+	FootprintZ=4;
+	BuildCostEnergy=20000;
+	BuildCostMetal=8000;
+	MaxDamage=6000;
+	MaxWaterDepth=35;
+	MaxSlope=40;
+	EnergyUse=25;
+	BuildTime=56000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=850;
+	SoundCategory=skultratank;
+	Category=SKIMMERS TANK WEAPON NOTAIR NOTSUB ;
+	TEDClass=TANK;
+	Corpse=skultratank_dead;
+	UnitNumber=4;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	canattack=1;
+	MaxVelocity=1.2;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=300;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=TANK3;
+	Upright=0;
+	autoheal=0;
+	HideDamage=0;
+	ImmuneToParalyzer=0;
+	weapon1=ultra_cannon;
+	weapon2=ultrarmissile;
+	WeaponSlaveTo2=1;
+	NoChaseCategory=VTOL NEUTRAL MINERALS;
+	BadTargetCategory=VTOL NEUTRAL;
+	OnlyTargetCategory1=NOTAIR;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 2 7;
+ 	 collisionVolumeScales = 36 17 62;
+  	collisionVolumeTest = 1;
+	[SFXTypes]
+	{
+	explosiongenerator0=custom:mediumflare;
+	}
+	
+}

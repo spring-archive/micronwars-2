@@ -1,0 +1,64 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO] 
+{
+	name=medium Machinegun;
+	unitname=skmediummachinegun;
+	buildcostenergy=800;
+	buildcostmetal=500;
+	buildtime=6200;
+	category=SKIMMERS WEAPON NOTAIR NOTLAND;
+	description=medium Machinegun;
+	[CustomParams]
+	{
+		RequireTech=3 outpost;
+	}
+	footprintx=2;
+	footprintz=2;
+	maxdamage=2000;
+	objectname=skmediummachinegun.s3o;
+	side=Skimmers;
+	soundcategory=Machinegun;
+	tedclass=FORT;
+	brakerate=0;
+	acceleration=0;
+	maxvelocity=0;
+	maxslope=14;
+	turnrate=0;
+	yardmap=oooo;
+	builder=0;
+	workertime=0;
+	energystorage=0;
+	energyuse=30;
+	metalstorage=0;
+	canattack=1;
+	canstop=1;
+	autoheal=0;
+	sightdistance=600;
+	weapon1=mediummachinegun;
+	NoChaseCategory=NEUTRAL VTOL MINERALS;
+	OnlyTargetCategory=NOTAIR;
+	explodeas=MEDIUM_BUILDINGEX;
+	selfdestructas=MEDIUM_BUILDING;
+	nochasecategory=MOBILE;
+	maxwaterdepth=0;
+	corpse=skmediummachinegun_dead;
+	smoothanim=1;
+	icontype=building;
+	bmcode=0;
+	noautofire=0;
+	buildangle=32768;
+	seismicsignature=0;
+	firestandorders=1;
+	standingfireorder=2;
+	defaultmissiontype=GUARD_NOMOVE;
+collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 7 -5;
+ 	 collisionVolumeScales = 28 19 35;
+  	collisionVolumeTest = 1;
+        [SFXTypes]
+	{
+	explosiongenerator0=custom:goliathflare;
+	}
+	
+}

@@ -1,0 +1,61 @@
+// Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=skrefinery;
+	Version=1;
+	Side=Skimmers;
+	Objectname=skrefinery.s3o;
+	Designation=CE-GPP;
+	Name=Refinery;
+	Description=resource dropoffpoint;
+	
+	FootprintX=8;
+	FootprintZ=8;
+	BuildCostEnergy=800;
+	BuildCostMetal=420;
+	MaxDamage=6000;
+	MaxWaterDepth=0;
+	MaxSlope=35;
+	BuildTime=7500;
+	WorkerTime=180;
+	BMcode=1;
+	Builder=1;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=300;
+	RadarDistance=0;
+	SoundCategory=ARM_FUS;
+	onoffable=1;
+	ExplodeAs=BIG_UNITEX;
+	SelfDestructAs=ESTOR_BUILDINGEX;
+	Category=SKIMMERS ENERGY NOWEAPON NOTAIR NOTSUB ;
+	TEDClass=METAL;
+	YardMap=oooooooo oooooooo oooooooo ooccccoo ooccccoo ooccccoo ooccccoo ooccccoo;
+	Corpse=skrefinery_dead;
+	icontype=bigbuilding;
+	metalstorage=5000;
+	
+	ActivateWhenBuilt=1;
+	Ovradjust=1;
+	autoheal=0;
+	canbeassisted=0;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = -4 -5 1;
+ 	 collisionVolumeScales = 59 58 121;
+  	collisionVolumeTest = 1;
+	[customparams]
+	{
+	is_dropoff=1;
+}
+[SFXTypes]
+	{
+	explosiongenerator0=custom:smoke;
+	
+	}
+}
+
+	
+	
+

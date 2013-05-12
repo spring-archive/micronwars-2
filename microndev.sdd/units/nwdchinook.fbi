@@ -1,0 +1,62 @@
+//Copyrighted : Razorblade;
+
+
+[UNITINFO] 
+{
+	name=Chinook;
+	unitname=NWDchinook;
+	buildcostenergy=9900;
+	buildcostmetal=985;
+	buildtime=21900;
+	category=NWD VTOL HELICOPTER ;
+	description= parajumpers helicopter + transport ;
+	footprintx=3;
+	footprintz=3;
+	maxdamage=1600;
+	objectname=NWDchinook.s3o;
+	side=NWD;
+	soundcategory=;
+	tedclass=VTOL;
+	brakerate=2;
+	acceleration=0.2;
+	canmove=1;
+	maxvelocity=4;
+	turnrate=150;
+	cruisealt=80;
+	canfly=1;
+	canstop=1;
+	[customParams] {
+    
+    troopdropper=1;
+	RequireTech= 4 outpost;
+  }
+	turnrate=200;
+	radardistancejam=75;
+	sightdistance=500;
+	explodeas=;
+	selfdestructas=;
+	maxwaterdepth=0;
+	smoothanim=1;
+	icontype=air;
+	bmcode=1;
+	defaultmissiontype=VTOL_standby;
+	canpatrol=1;
+	mobilestandorders=1;
+	standingmoveorder=1;
+	canguard=1;
+	steeringmode=1;
+	bankscale=1;
+	canattack=1;
+	weapon1=us_paratrooper;
+	collide=0;
+	CanDropFlare=1;
+	FlareReload=7;
+	FlareEfficieny=0.4;
+	FlareSalvoSize=4;
+	FlareSalvoDelay=0.3;
+	FlareDropVector=0 -1 -1;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 2 3;
+ 	collisionVolumeScales = 15 10 59;
+  	collisionVolumeTest = 1;
+}

@@ -1,0 +1,49 @@
+[harpoon]
+	{
+	
+	name=harpoon anti ship missile;
+	rendertype=1;
+	lineofsight=1;
+    turret=1;
+     
+	model=harpoon.s3o;
+
+	flighttime=100;
+        range=10000;
+	reloadtime=25;
+	weaponvelocity=800;
+	startvelocity=110;
+	weaponacceleration=125;
+	turnrate=5500;
+	areaofeffect=128;
+	
+    	tolerance=3000;
+	
+    	trajectoryheight=1.0;
+	soundstart=hawklaunch;
+	soundhit=;
+	
+	targetable=2;
+	
+	firestarter=75;
+	
+	firedelay=.0;
+        guidance=1;
+	tracks=1;
+	selfprop=1;
+	smoketrail=1;
+     	
+	cegtag=raketenrauch5;
+	explosiongenerator=custom:MittleGrosseExplosion2;
+
+
+	[DAMAGE]
+		{
+		default=3500;
+		
+		
+		
+} 
+	}
+
+

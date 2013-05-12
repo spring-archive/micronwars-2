@@ -1,0 +1,286 @@
+[groshitzeexplosion2]
+{
+
+
+
+
+
+
+
+
+	[funken]
+	{
+	class=CSimpleParticleSystem;
+
+		[properties]
+		{
+		alwaysVisible=1;
+		Texture=plasma;
+
+		colorMap	= 1 0.4 0.0 0.01		0 0 0 0.01;
+
+      		pos 		= 0 r8, 1 r15, 0 r8;
+		gravity		= 0, -1, 0;
+	       	emitVector	= 0, 1, 0;
+		emitRot		= 0;
+		emitRotSpread	= 100;
+
+		sizeGrowth	= 0.5;
+		sizeMod		= 1.0;
+
+		airdrag			= 0.8;
+		particleLife		= 20;
+		particleLifeSpread	= 16;
+		numParticles		= 15;
+		particleSpeed		= 5;
+		particleSpeedSpread	= 20;
+		particleSize		= 8;
+		particleSizeSpread	= 4;
+
+		directional		= 1; 
+		useAirLos		= 1;
+		}
+	air=1;
+	ground=1;
+	water=0;
+	count=1;
+	}
+
+
+	[hitzerauch1]
+	{
+	class=CSimpleParticleSystem;
+
+		[properties]
+		{
+		alwaysVisible=1;
+		Texture=smoke;
+
+		colorMap	= 	.7 .4 0 .8   1 0.25 0 0.9  1 0.25 0 0.9  1 0.25 0 0.8   .6 .6 .6 1		0.0 0.0 0.0 0.0;
+
+      		pos 		= 0, 1,0;
+		gravity		= 0, -0.2, 0;
+	       	emitVector	= 0, 1, 0;
+		emitRot		= 0;
+		emitRotSpread	= 50;
+
+		sizeGrowth	= 0.5;
+		sizeMod		= 1.0;
+
+		airdrag			= 0.8;
+		particleLife		= 50;
+		particleLifeSpread	= 25;
+		numParticles		= 1;
+		particleSpeed		= 4;
+		particleSpeedSpread	= 20;
+		particleSize		= 16;
+		particleSizeSpread	= 8;
+
+		directional		= 0; 
+		useAirLos		= 1;
+		}
+	air=1;
+	ground=1;
+	water=0;
+	count=45;
+	}
+
+
+	[kaltesrauch1]
+	{
+	class=CSimpleParticleSystem;
+
+		[properties]
+		{
+		alwaysVisible=1;
+		Texture=smoke;
+
+		colorMap	= .7 .7 1 1  		0.0 0.0 0.0 0.0;
+
+      		pos 		= 0, 1,0;
+		gravity		= 0, -1, 0;
+	       	emitVector	= 0, 1, 0;
+		emitRot		= 0;
+		emitRotSpread	= 40;
+
+		sizeGrowth	= 0.5;
+		sizeMod		= 1.0;
+
+		airdrag			= 0.8;
+		particleLife		= 50;
+		particleLifeSpread	= 25;
+		numParticles		= 1;
+		particleSpeed		= 5;
+		particleSpeedSpread	= 20;
+		particleSize		= 16;
+		particleSizeSpread	= 8;
+
+		directional		= 0; 
+		useAirLos		= 1;
+		}
+	air=0;
+	ground=0;
+	water=1;
+	count=80;
+	}
+
+
+
+
+
+
+
+
+	[stacheln1]
+	{
+		class=explspike;
+		[properties]
+		{
+			dir= r1 r-1, r-5 r5, r1 r-1;
+			width=32;
+			length=8;
+			lengthGrowth=0;
+			pos= 0, 0, 0;
+			alpha=1;
+			alphadecay=0.05;
+			color=0.7, 0.7, 1.0;
+
+		}
+		air=0;
+		water=1;
+		ground=0;
+  		count=10; 
+	}
+
+
+	[stacheln2]
+	{
+		class=explspike;
+		[properties]
+		{
+			dir= 0, r-8 r15, 0;
+			width=32;
+			length=8;
+			lengthGrowth=0;
+			pos= 0, 0, 0;
+			alpha=1;
+			alphadecay=0.05;
+			color=0.8, 0.4, 0.0;
+
+		}
+		air=0;
+		water=0;
+		ground=1;
+  		count=10; 
+	}
+
+
+	[Yu]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=explo;
+			alwaysVisible=1;
+		  size=80;
+		  sizeGrowth=.1;
+		  ttl=32;
+	          colorMap=1 .1 0 1  0 0 0 .1;
+		}
+    	air=1;
+    	ground=1;
+    	water=0;
+	count=3;
+	}
+
+
+
+
+
+	[Yu2]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=groundring2;
+			alwaysVisible=1;
+		  size=80;
+		  sizeGrowth=2;
+		  ttl=40;
+	          colorMap=1 .1 0 1  0 0 0 .1;
+		}
+    	air=1;
+    	ground=1;
+    	water=0;
+	count=1;
+	}
+
+
+
+
+	[Yu21]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=groundring2;
+			alwaysVisible=1;
+		  size=50;
+		  sizeGrowth=2;
+		  ttl=40;
+	          colorMap=1 .1 0 1  0 0 0 .1;
+		}
+    	air=1;
+    	ground=1;
+    	water=0;
+	count=1;
+	}
+
+
+
+	[Yudk]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=explo;
+			alwaysVisible=1;
+		  size=80;
+		  sizeGrowth=.1;
+		  ttl=32;
+	          colorMap=.4 .4 2 1	0 0 0 .1;
+		}
+    	air=0;
+    	ground=0;
+    	water=1;
+	count=1;
+	}
+
+
+
+
+
+	[Yudk2]
+		{
+		class=CSimpleGroundFlash;
+		[properties]
+		{
+		  texture=groundring2;
+			alwaysVisible=1;
+		  size=80;
+		  sizeGrowth=2;
+		  ttl=40;
+	          colorMap=.7 .7 1 1      0 0 0 .1;
+		}
+    	air=0;
+    	ground=0;
+    	water=1;
+	count=1;
+	}
+
+
+
+
+
+
+}

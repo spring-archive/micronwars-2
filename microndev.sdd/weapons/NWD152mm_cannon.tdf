@@ -1,0 +1,25 @@
+[NWD152MM_CANNON]
+	{
+	name=152mm cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	trajectoryheight=5.0;
+	minbarrelangle=-45;
+     	 range=1500;
+	reloadtime=15;
+	weaponvelocity=500;
+	areaofeffect=128;
+	soundstart=NWD152mmdanafire;
+	soundhit=artyexplo1;
+  	hightrajectory=1;
+	explosiongenerator=custom:SS2explosion_UHE;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+	default=800;	
+	
+    }
+	}

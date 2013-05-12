@@ -1,0 +1,64 @@
+//Copyrighted : Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=ioncannon;
+	Version=1;
+	Side=Skimmers;
+	Objectname=ioncannon.s3o;
+	Designation=Skimmers;
+	Name=Ion Cannon;
+	Description=shooting ion beams from space;
+	FootprintX=15;
+	FootprintZ=15;
+	BuildCostEnergy=20000;
+	BuildCostMetal=80000;
+	MaxDamage=100000;
+	MaxWaterDepth=35;
+	MaxSlope=40;
+	EnergyUse=2500;
+	BuildTime=200000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=850;
+	SoundCategory=;
+	Category=NEUTRAL NOTAIR OUTPOST ;
+	TEDClass=FORT;
+	Yardmap=ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ooooooooooooooo ;
+ 	Corpse=;
+	UnitNumber=4;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	ExplodeAs=;
+	SelfDestructAs=;
+	candgun=1;
+	canstop=1;
+	canattack=1;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	Upright=0;
+	autoheal=0;
+	firestate=1;
+	HideDamage=0;
+	weapon1=orbital_laser;
+	weapon2=ioncannonfake;
+	weapon3=ioncannonfake;
+	weapon4=ioncannonfake;
+	weapon5=ioncannonfake;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 5 7;
+ 	 collisionVolumeScales = 191 91 191;
+  	collisionVolumeTest = 1;
+	[customparams]
+	{
+	flag=1;
+	dontcount=1;
+	do_not_destroy=yes;
+	do_not_spawn_near=yes;
+	ancient_metal=yes;
+	ancient_power=yes;	
+	}
+
+	
+}
