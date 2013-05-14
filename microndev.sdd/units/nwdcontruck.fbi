@@ -13,6 +13,13 @@
 	FootprintZ=2;
 	BuildCostEnergy=2400;
 	BuildCostMetal=240;
+	[customparams]
+	{
+	build_tiers=yes;
+		tier_cost2=5000;
+		tier_cost3=15000;
+
+	}
 	MaxDamage=800;
 	MaxWaterDepth=100;
 	MaxSlope=27;

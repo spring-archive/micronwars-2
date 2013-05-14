@@ -26,7 +26,8 @@
 	RadarDistance=0;
 	SoundCategory=ARM_MEX;
 	EnergyStorage=0;
-	MetalStorage=0;
+	MetalStorage=2000;
+	maxwaterdepth=255;
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
 	Category=NWD metal extractor NOTAIR NOTSUB  ;

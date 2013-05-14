@@ -8,7 +8,13 @@
 	Designation=CE-GPP;
 	Name=Air Factory;
 	Description=Builds air units;
-	
+	[customparams]
+	{
+	build_tiers=yes;
+		tier_cost2=5000;
+		tier_cost3=12000;
+
+	}
 	FootprintX=28;
 	FootprintZ=15;
 	BuildCostEnergy=10800;

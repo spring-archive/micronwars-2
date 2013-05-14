@@ -8,7 +8,13 @@
 	Designation=CE-GPP;
 	Name=helicopter Factory;
 	Description=Builds helicopters;
-	
+	[customparams]
+	{
+	build_tiers=yes;
+		tier_cost2=9000;
+		tier_cost3=18000;
+
+	}
 	FootprintX=8;
 	FootprintZ=8;
 	BuildCostEnergy=5400;

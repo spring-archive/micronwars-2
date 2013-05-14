@@ -1,7 +1,7 @@
 return {
   name='Micronwars2',
   description='Moooooo!',
-  shortname='MW',
+  shortname='MW2',
   version='$VERSION',
 
   mutator='Official',

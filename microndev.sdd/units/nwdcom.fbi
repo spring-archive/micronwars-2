@@ -9,7 +9,13 @@
 	Designation=CE-GPP;
 	Name=Command Building;
 	Description=Main Base;
-	
+	[customparams]
+	{
+	build_tiers=yes;
+		tier_cost2=10000;
+		tier_cost3=20000;
+
+	}
 	FootprintX=12;
 	FootprintZ=12;
 	BuildCostEnergy=30000;
