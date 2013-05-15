@@ -1,0 +1,71 @@
+// Copyrighted :Razorblade;
+
+[UNITINFO]
+	{
+	UnitName=seabuilder;
+	Version=1;
+	Side=NWD;
+	Objectname=seabuilder.s3o;
+	Designation=NWD;
+	Name=Sea Expander;
+	Description=Builds defenses and eco;
+	FootprintX=2;
+	FootprintZ=2;
+	BuildCostEnergy=2400;
+	BuildCostMetal=240;
+	[customparams]
+	{
+	build_tiers=yes;
+		tier_cost2=5000;
+		tier_cost3=15000;
+
+	}
+	MaxDamage=1100;
+	EnergyUse=0;
+	BuildTime=6400;
+	radardistance=1000;
+	BMcode=1;
+	ThreeD=1;
+	ZBuffer=1;
+	SightDistance=500;
+	SoundCategory=CORE_COM;
+	ExplodeAs=nuke_shell;
+	SelfDestructAs=nuke_shell;
+	Category=NWD SHIP BUILDER NOTAIR NOTSUB ;
+	TEDClass=CNSTR;
+	Corpse=;
+	builder=1;
+	workertime=250;
+	mobilestandorders=1;
+	StandingMoveOrder=0;
+	minwaterdepth=15;
+	floater=1;
+	waterline=10;
+	canmove=1;
+	autoheal=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	
+	canrepair=0;
+	MaxVelocity=1.6;
+	BrakeRate=0.32;
+	Acceleration=0.16;
+	TurnRate=1030;
+	SteeringMode=2;
+	ShootMe=1;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;
+	MovementClass=BOAT3;
+	Upright=0;
+	HideDamage=0;
+	ImmuneToParalyzer=0;
+	shownanospray=false;
+	Builddistance=250;
+	canbeassisted=0;
+	collisionVolumeType = box;
+  	collisionVolumeOffsets = 0 2 1;
+ 	 collisionVolumeScales = 18 20 36;
+  	collisionVolumeTest = 1;
+	
+}

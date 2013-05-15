@@ -7,6 +7,7 @@
 	Designation=IS-MEK3;
 	Name=Metal Extractor;
 	Description=Extracts Metal;
+	
 	FootprintX=4;
 	FootprintZ=4;
 	BuildCostEnergy=1500;
@@ -26,7 +27,7 @@
 	RadarDistance=0;
 	SoundCategory=ARM_MEX;
 	EnergyStorage=0;
-	MetalStorage=2000;
+	MetalStorage=250;
 	maxwaterdepth=255;
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
@@ -37,7 +38,7 @@
 	buildangle=8192;
 	ActivateWhenBuilt=1;
 	onoffable=1;
-	ExtractsMetal=0.0004;
+	ExtractsMetal=0.0007;
 	digger=1;
 collisionVolumeType = box;
   	collisionVolumeOffsets = 0 -1 3;

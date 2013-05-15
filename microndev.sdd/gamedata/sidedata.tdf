@@ -85,6 +85,7 @@
 	canbuild11=nwdm163aa;
 	
 }
+	
 
 	[skairfac]
 {
@@ -106,6 +107,7 @@
 }
 	[skshipyard]
 {
+	canbuild1=seabuilder;
 	canbuild2=nwdsubmarine;
 	canbuild3=nwdiowa;
 	canbuild4=skacarrier;
@@ -114,7 +116,10 @@
 	canbuild7=nwdohio;
 }
 
-
+[seabuilder]
+{
+	canbuild1=nwdmex;
+}
 	
 
 

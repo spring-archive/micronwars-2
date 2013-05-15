@@ -9,6 +9,7 @@
 	Designation=CE-GPP;
 	Name=Power Plant;
 	Description=Produces Energy;
+	
 	FootprintX=6;
 	FootprintZ=6;
 	BuildCostEnergy=2800;

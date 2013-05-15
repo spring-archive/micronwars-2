@@ -1,0 +1,244 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  body, track1, track2, track3, light1, light2, light11, light22,
+       bwheels, fwheels, turret, barrel, flare;
+
+static-var  Static_Var_1, bMoving, Static_Var_3, Static_Var_4, Static_Var_5;
+
+
+TreadControl(Func_Var_1, Func_Var_2)
+{
+	Func_Var_1 = Rand( 200, 350 );
+	while( bMoving )
+	{
+		++Func_Var_2;
+		if( Func_Var_2 == 4 )
+		{
+			Func_Var_2 = 1;
+		}
+		if( Func_Var_2 == 1 )
+		{
+			show track1;
+			hide track2;
+			hide track3;
+		}
+		if( Func_Var_2 == 2 )
+		{
+			show track2;
+			hide track3;
+			hide track1;
+		}
+		if( Func_Var_2 == 3 )
+		{
+			show track3;
+			hide track2;
+			hide track1;
+		}
+		sleep 30;
+	}
+}
+
+buildinglights(Func_Var_1, Func_Var_2)
+{
+	Func_Var_1 = Rand( 4000, 5000 );
+	while( Static_Var_4 )
+	{
+		++Func_Var_2;
+		if( Func_Var_2 == 3 )
+		{
+			Func_Var_2 = 1;
+		}
+		if( Func_Var_2 == 1 )
+		{
+			hide light2;
+			show light22;
+			show light1;
+			hide light11;
+		}
+		if( Func_Var_2 == 2 )
+		{
+			hide light1;
+			show light11;
+			show light2;
+			hide light22;
+		}
+		sleep 300;
+	}
+}
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	var Func_Var_4;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			Func_Var_4 = Rand( 1, 2 );
+			if( Func_Var_4 == 1 )
+			{
+				emit-sfx smoketype from body;
+			}
+			if( Func_Var_4 == 2 )
+			{
+				emit-sfx smoketype from body;
+			}
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+Halt()
+{
+	sleep 250;
+	if( !bMoving )
+	{
+		Static_Var_1 = 0;
+	}
+}
+
+StartMoving()
+{
+	bMoving = TRUE;
+	if( !Static_Var_1 )
+	{
+		start-script TreadControl();
+	}
+}
+
+StopMoving()
+{
+	bMoving = FALSE;
+	start-script Halt();
+}
+
+Create()
+{
+	start-script SmokeUnit();
+	Static_Var_4 = 0;
+	Static_Var_5 = 0;
+	hide track2;
+	hide track1;
+	hide light2;
+	hide light22;
+	bMoving = FALSE;
+	Static_Var_1 = 0;
+	Static_Var_3 = 10000;
+}
+
+RestoreAfterDelay()
+{
+	sleep Static_Var_3;
+	turn turret to y-axis <0.000000> speed <40.000000>;
+	turn turret to x-axis <0.000000> speed <40.000000>;
+}
+
+AimWeapon1(Func_Var_1, Func_Var_2)
+{
+	signal 2;
+	set-signal-mask 2;
+	turn turret to y-axis Func_Var_1 speed <50.000000>;
+	turn turret to x-axis <0.000000> - Func_Var_2 speed <50.000000>;
+	wait-for-turn turret around y-axis;
+	wait-for-turn turret around x-axis;
+	start-script RestoreAfterDelay();
+	return (1);
+}
+
+FireWeapon1()
+{
+	move barrel to z-axis [-0.500000] now;
+	sleep 50;
+	move barrel to z-axis [0.000000] speed [200.000000];
+}
+
+AimFromWeapon1(Func_Var_1)
+{
+	Func_Var_1 = 10;
+}
+
+QueryWeapon1(Func_Var_1)
+{
+	Func_Var_1 = 12;
+}
+
+Halt2()
+{
+	sleep 250;
+	if( !Static_Var_4 )
+	{
+		Static_Var_5 = 0;
+		hide light2;
+		hide light22;
+		show light1;
+		show light11;
+	}
+}
+
+StartBuilding(Func_Var_1, Func_Var_2)
+{
+	set INBUILDSTANCE to 1;
+	Static_Var_4 = 1;
+	if( !Static_Var_5 )
+	{
+		start-script buildinglights();
+	}
+}
+
+StopBuilding()
+{
+	Static_Var_4 = 0;
+	start-script Halt2();
+	set INBUILDSTANCE to 0;
+}
+
+QueryNanoPiece(piecenum)
+{
+	piecenum = body;
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = body;
+}
+
+Killed(severity, corpsetype)
+{
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode body type BITMAPONLY | BITMAP1;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode body type SHATTER | BITMAP4;
+		return (0);
+	}
+	if( severity <= 99 )
+	{
+		corpsetype = 3;
+		explode body type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		return (0);
+	}
+	corpsetype = 3;
+	explode body type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+}
